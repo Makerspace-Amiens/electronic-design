@@ -6,5 +6,14 @@
     - name: Tutoriels
       link: /tutorials/
 - name: Ressources
-  link: /ressources/
+  link:
+  dropdown: 
+    - name: Outils
+      link: /tools/
+    - name: Composants
+      link: /components/
+    - name: Revendeurs
+      link: /resellers/
+    - name: Librairie
+      link: /libraries/
     
