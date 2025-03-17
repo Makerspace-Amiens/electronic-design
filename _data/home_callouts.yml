@@ -1,0 +1,23 @@
+style: is-light
+height: is-medium
+items:
+  - title: Informations générales
+    icon: fa-info-circle
+    description: >
+      Retrouvez les informations principales du site
+    call_to_action_name: Informations
+    call_to_action_link: /informations
+
+  - title: Autres infos
+    icon: fa-toolbox
+    description: >
+      D'autres infos ici
+    call_to_action_name: Voir les infos
+    call_to_action_link: /informations
+
+  - title: Autres infos
+    description: >
+      D'autres infos ici
+    icon: fa-cogs
+    call_to_action_name: Voir les infos
+    call_to_action_link: /informations
