@@ -2,7 +2,7 @@
 layout: documentation
 hide_hero: false
 doc_header: false
-component_toc: false
+component_toc: true
 hero_image: /assets/img/printer-farm.png
 hero_darken: true
 title: À propos du MakerSpace

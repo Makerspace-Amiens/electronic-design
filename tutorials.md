@@ -1,6 +1,6 @@
 ---
 title: Tutoriels
-subtitle: Liste de tutoriels
+subtitle: Guides pratiques pour apprendre l'électronique et le prototypage
 layout: documentation-category
 type: tutorial
 show_sidebar: false

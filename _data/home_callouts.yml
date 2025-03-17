@@ -8,16 +8,16 @@ items:
     call_to_action_name: Informations
     call_to_action_link: /informations
 
-  - title: Autres infos
+  - title: Tutoriels
     icon: fa-toolbox
     description: >
-      D'autres infos ici
-    call_to_action_name: Voir les infos
-    call_to_action_link: /informations
+      Guides pratiques pour apprendre l'électronique et le prototypage.
+    call_to_action_name: Voir les tutoriels
+    call_to_action_link: /tutorials
 
-  - title: Autres infos
+  - title: Les ressources
     description: >
-      D'autres infos ici
+      Informations sur les composants, circuits imprimés et microcontrôleurs.
     icon: fa-cogs
-    call_to_action_name: Voir les infos
-    call_to_action_link: /informations
+    call_to_action_name: Voir les ressources
+    call_to_action_link: /ressources

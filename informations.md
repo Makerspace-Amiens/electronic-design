@@ -3,37 +3,31 @@ layout: documentation
 hide_hero: false
 doc_header: false
 component_toc: true
-hero_image: /assets/img/placeholder.png
+hero_image: /assets/img/index.jpg
 hero_darken: true
-title: Information sur le site
-subtitle: Tout ce que vous devez savoir
-menubar: menu_bar
+title: Informations
+subtitle: Ce que vous trouverez sur ce site
 ---
 
-## Bienvenue sur la Page d'Information
+# Informations sur le site
 
-Cette page est dédiée à fournir des informations générales sur votre site. Vous pouvez y ajouter des descriptions de l'objectif du site, des services proposés, ou toute autre information utile pour vos utilisateurs.
+Ce site est une **documentation dédiée au Design Électronique**, développée et maintenue par le **MakerSpace UniLaSalle Amiens**. Il centralise les ressources, tutoriels et références utiles pour les étudiants et les passionnés d'électronique.
 
-Votre site peut inclure divers contenus tels que des ressources pédagogiques, des guides d'utilisation, ou des liens vers des projets pertinents.
+## 🎯 Objectif du site
+L’objectif de ce site est de fournir un point d'accès unique à toutes les ressources nécessaires pour apprendre et pratiquer le **Design Électronique**. Il s’adresse aux étudiants, enseignants et passionnés souhaitant :
+- Se former aux bases et concepts avancés de l’électronique.
+- Accéder à des exemples concrets et des études de cas.
+- Trouver des ressources pour leurs projets académiques et personnels.
+- Découvrir les équipements et possibilités offertes par le MakerSpace UniLaSalle Amiens.
 
-## Ce que vous pouvez inclure
+## 📌 Contenu du site
+Le site propose différentes sections :
+- **Tutoriels** : Guides pratiques pour apprendre l'électronique et le prototypage.
+- **Ressources techniques** : Informations sur les composants, circuits imprimés et microcontrôleurs.
+- **Projets étudiants** : Exemples de réalisations documentées.
+- **Machines et outils** : Présentation des équipements disponibles au MakerSpace.
 
-- **Description du site** : Expliquez l’objectif principal de votre site et ce qu’il propose.
-- **Horaires d'accès** : Indiquez les horaires ou la disponibilité pour des événements spécifiques, des ateliers, etc.
-- **Règles d’utilisation** : Informez les utilisateurs des bonnes pratiques et des règles de conduite.
+## 🔍 Comment naviguer ?
+Le menu principal vous permet d’accéder rapidement aux différentes catégories. Chaque section est conçue pour être intuitive et vous guider pas à pas dans votre apprentissage.
 
-## Ressources supplémentaires
-
-- [Exemple de Resource 1](https://example.com)
-- [Exemple de Resource 2](https://example.com)
-- [Exemple de Resource 3](https://example.com)
-
----
-
-### Section supplémentaire
-
-Vous pouvez ajouter ici des informations additionnelles qui seraient utiles aux utilisateurs, comme des liens vers d’autres sections de votre site, des projets récents, ou des contacts importants.
-
----
-
-_Note : Personnalisez cette page en fonction des besoins spécifiques de votre site et de votre public._
+N’hésitez pas à explorer les différentes sections du site pour approfondir vos connaissances en **Design Électronique** et tirer le meilleur parti du **MakerSpace UniLaSalle Amiens** !
