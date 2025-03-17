@@ -1,7 +1,5 @@
 - name: Informations
   link: /informations/
-- name: Blog
-  link: /blog/
 - name: Tutoriels
   link: 
   dropdown: 

@@ -1,7 +1,7 @@
-title: Craft The Docs
-description: Craft your docs for the MakerSpace Amiens
+title: Electronic Design
+description: Concevez, prototypez et réalisez vos cartes électroniques
 theme: bulma-clean-theme
-url: https://makerspace-amiens.fr/craft-the-docs
+url: https://makerspace-amiens.fr/electronic-design
 
 force_theme: light
 permalink: pretty
