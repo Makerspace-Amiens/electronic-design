@@ -8,6 +8,7 @@ component_toc: true
 doc_header: true
 type: tutorial
 order: 1
+published: false
 
 title: Exemple de Tutoriel
 subtitle: Suivez ces étapes pour accomplir votre tâche
