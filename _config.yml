@@ -1,7 +1,8 @@
 title: Electronic Design
 description: Concevez, prototypez et réalisez vos cartes électroniques
 theme: bulma-clean-theme
-url: https://makerspace-amiens.fr/electronic-design
+url: https://makerspace-amiens.fr
+baseurl: /electronic-design
 
 force_theme: light
 permalink: pretty
