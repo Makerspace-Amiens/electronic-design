@@ -1,0 +1,28 @@
+{
+  "name": "makerspace-amiens.fr/electronic-design",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "jekyll",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll",
+      "onAutoForward": "notify"
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers-extra/features/claude-code": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "Shopify.ruby-lsp"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

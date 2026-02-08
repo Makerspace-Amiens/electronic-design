@@ -1,0 +1,26 @@
+version: '3.8'
+
+"name": "makerspace-amiens-fr-electronic-design"
+
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    container_name: electronic-design-jekyll
+    volumes:
+      - .:/workspace
+      - bundle_cache:/usr/local/bundle
+    ports:
+      - "4000:4000"
+    command: >
+      bash -c "bundle install &&
+               bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling"
+    environment:
+      - JEKYLL_ENV=development
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+
+volumes:
+  bundle_cache:
