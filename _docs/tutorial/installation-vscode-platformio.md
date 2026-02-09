@@ -416,7 +416,6 @@ content="1. Ouvrez PlatformIO Home<br>
 ### Tutoriels et guides
 
 - [PlatformIO Getting Started](https://docs.platformio.org/en/latest/integration/ide/vscode.html)
-- [PlatformIO YouTube Channel](https://www.youtube.com/@PlatformIO)
 - [Forum PlatformIO](https://community.platformio.org/)
 
 ### Commandes CLI utiles
