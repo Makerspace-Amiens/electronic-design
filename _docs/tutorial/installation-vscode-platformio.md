@@ -344,7 +344,7 @@ title = "Extensions VSCode utiles"
 content="Installez ces extensions pour améliorer votre productivité :<br>
 - <strong>C/C++</strong> (Microsoft) : IntelliSense pour C/C++<br>
 - <strong>Better C++ Syntax</strong> : Meilleure coloration syntaxique<br>
-- <strong>Bracket Pair Colorizer 2</strong> : Colore les paires de parenthèses<br> %}
+- <strong>Bracket Pair Colorizer 2</strong> : Colore les paires de parenthèses<br>" %}
 
 {% include step-tuto.html
 greyBackground = true
