@@ -4,6 +4,9 @@
   "service": "jekyll",
   "workspaceFolder": "/workspace",
   "forwardPorts": [4000],
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,readonly,type=bind"
+  ],
   "portsAttributes": {
     "4000": {
       "label": "Jekyll",
