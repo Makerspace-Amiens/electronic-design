@@ -421,21 +421,11 @@ Consultez les capabilities (capacités de fabrication) de votre fabricant :
 - **Aisler** : [Capabilities](https://aisler.net/help/capabilities)
 - **JLCPCB** : [Capabilities](https://jlcpcb.com/capabilities/Capabilities)
 - **PCBWay** : [Capabilities](https://www.pcbway.com/capabilities.html)
-- **Eurocircuits** : [Design Guidelines](https://www.eurocircuits.com/design-guidelines/)
-
-### Calculateurs et outils en ligne
-
-- [Calculateur de largeur de piste](https://www.4pcb.com/trace-width-calculator.html) : Dimensionner pistes selon courant
-- [Calculateur d'impédance](https://www.eeweb.com/tools/microstrip-impedance/) : Pour signaux haute vitesse
-- [PCB Cost Calculator](https://pcbshopper.com/) : Comparer les prix de plusieurs fabricants
-- [Gerber Viewer](https://www.gerber-viewer.com/) : Visualiser vos Gerber en ligne
 
 ### Guides et standards
 
 - [IPC Standards](https://www.ipc.org/) : Standards industriels PCB
 - [KiCAD Documentation - Gerber](https://docs.kicad.org/master/fr/pcbnew/pcbnew.html#generate-fabrication-files)
-- [Aisler Help Center](https://aisler.net/help)
-- [Guide JLCPCB](https://jlcpcb.com/help/category/how-to-generate-gerber-and-drill-files-in-kicad)
 
 {% include message.html
 title="Continuez à apprendre"

@@ -469,7 +469,6 @@ Pour approfondir vos connaissances sur Eeschema et KiCAD :
 - [Documentation officielle Eeschema](https://docs.kicad.org/master/fr/eeschema/eeschema.html)
 - [Forum KiCAD (en anglais)](https://forum.kicad.info/)
 - [Tutoriels vidéo KiCAD](https://www.youtube.com/results?search_query=kicad+eeschema+tutorial)
-- [SnapEDA - Bibliothèques de composants](https://www.snapeda.com/)
 - [KiCad Library](https://kicad.github.io/)
 
 {% include message.html

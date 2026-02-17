@@ -613,11 +613,8 @@ icon="fas fa-microchip" %}
 Pour approfondir vos connaissances sur Pcbnew et la conception de PCB :
 
 - [Documentation officielle Pcbnew](https://docs.kicad.org/master/fr/pcbnew/pcbnew.html)
-- [Calculateur de largeur de pistes](https://www.4pcb.com/trace-width-calculator.html)
 - [Forum KiCAD](https://forum.kicad.info/)
 - [EEVblog - Tutoriels PCB](https://www.eevblog.com/)
-- [Guide des fabricants de PCB](https://pcbshopper.com/)
-- [Calculateur d'impédance](https://www.eeweb.com/tools/microstrip-impedance/)
 
 {% include message.html
 title="Continuez à pratiquer !"
