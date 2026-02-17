@@ -284,9 +284,13 @@ content="
 
 ### Code 2 : Utilisation avec AccelStepper
 
-Pour cette demonstration l'installation d'AccelStepper est obligatoire, une documentation est disponible dans le tutoriel [VSCode et PlatformIO ](/electronic-design/docs/tutorial/installation-vscode-platformio/)
+Pour cette démonstration, la bibliothèque AccelStepper est obligatoire. Ajoutez la ligne suivante dans votre `platformio.ini` :
 
-Voici ensuite le code necessaire a cette demonstration :
+```ini
+lib_deps = waspinator/AccelStepper@^1.64
+```
+
+Voici le code nécessaire à cette démonstration :
 
 ```cpp
 #include <Arduino.h>
@@ -346,7 +350,7 @@ content="
 
 <strong>Découplage :</strong><br>
 - C1 (100µF) : au plus près de VMOT, entre VMOT et GND<br>
-Le reste du decouplage est present directement sur le module.
+Le reste du découplage est présent directement sur le module.
 
 <strong>Signaux de contrôle :</strong><br>
 - STEP, DIR : pistes courtes, éloignées des pistes de puissance<br>
@@ -492,7 +496,7 @@ Le **A4988** est un driver incontournable pour débuter avec les moteurs pas-à-
 
 - **Condensateur 100µF** sur VMOT : absolument indispensable, protège le driver
 - **RESET et SLEEP** doivent être reliés ensemble ou à 3.3V pour activer le driver
-- **Vref** se règle avec un multimètre : Vref = Imax × 8 × Rsens
+- **Vref** se règle avec un multimètre : Vref = Imax × 8 × Rsense
 - **Dissipation thermique** : prévoir un dissipateur pour des courants > 0.8A en continu
 - **ESP32** : 3.3V logique, compatible avec le VDD du A4988 (3.0V - 5.5V)
 
