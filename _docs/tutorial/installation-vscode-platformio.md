@@ -334,6 +334,44 @@ icon="fas fa-check-circle" %}
 
 ---
 
+## Installer des bibliothèques
+
+Les bibliothèques se déclarent directement dans le fichier `platformio.ini` via la clé `lib_deps`. C'est la méthode recommandée : les dépendances sont versionnées avec le projet et installées automatiquement à la compilation.
+
+{% include step-tuto.html
+greyBackground = true
+title = "Étape 1 : Trouver l'identifiant de la bibliothèque"
+content="Rendez-vous sur le registre officiel <a href='https://registry.platformio.org/'>registry.platformio.org</a> et recherchez la bibliothèque souhaitée. Notez son identifiant au format <code>auteur/NomLib</code> (ex : <code>waspinator/AccelStepper</code>)." %}
+
+{% include step-tuto.html
+greyBackground = true
+title = "Étape 2 : Ajouter lib_deps dans platformio.ini"
+content="Ouvrez le fichier <code>platformio.ini</code> à la racine de votre projet et ajoutez la clé <code>lib_deps</code> :<br><br>
+<pre><code>[env:esp32dev]
+platform = espressif32
+board = esp32dev
+framework = arduino
+monitor_speed = 115200
+lib_deps =
+    waspinator/AccelStepper@^1.64</code></pre><br>
+Pour ajouter plusieurs bibliothèques, listez-les les unes sous les autres :
+<pre><code>lib_deps =
+    waspinator/AccelStepper@^1.64
+    bblanchon/ArduinoJson@^7.0.0</code></pre>" %}
+
+{% include step-tuto.html
+greyBackground = true
+title = "Étape 3 : Compiler pour installer"
+content="Lancez une compilation avec <strong>Ctrl+Alt+B</strong> (Windows/Linux) ou <strong>Cmd+Alt+B</strong> (macOS). PlatformIO télécharge et installe automatiquement toutes les bibliothèques listées dans <code>lib_deps</code> avant de compiler." %}
+
+{% include message.html
+title="Format des versions"
+message="Le symbole <strong>^</strong> signifie « version compatible » (ex : <code>^1.64</code> accepte 1.64, 1.65... mais pas 2.0). Utilisez <code>@*</code> pour toujours prendre la dernière version, ou un numéro exact comme <code>@1.64.0</code> pour figer la version."
+status="is-info"
+icon="fas fa-tag" %}
+
+---
+
 ## Configuration recommandée de VSCode
 
 Voici quelques réglages utiles pour améliorer votre expérience de développement.
