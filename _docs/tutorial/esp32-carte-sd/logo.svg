@@ -57,12 +57,12 @@
        transform="rotate(30)" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.3584px;font-family:'System Font';-inkscape-font-specification:'System Font Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.14818"
-       x="276.32648"
+       x="282.00977"
        y="172.36096"
        id="text8"><tspan
          sodipodi:role="line"
          style="stroke-width:1.14818"
-         x="276.32648"
+         x="282.00977"
          y="172.36096"
          id="tspan9">ESP32 et carte SD</tspan></text><image
        width="75.263855"
