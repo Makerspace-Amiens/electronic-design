@@ -1,10 +1,9 @@
 - name: Informations
   link: /informations/
 - name: Tutoriels
-  link: 
-  dropdown: 
-    - name: Tutoriels
-      link: /tutorials/
+  link: /tutorials/
+- name: Projets
+  link: /projects/
 - name: Ressources
   link:
   dropdown: 
