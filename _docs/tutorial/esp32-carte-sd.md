@@ -50,6 +50,7 @@ todo: 100
 La **carte SD** est un moyen simple et économique d'ajouter du stockage persistant à un projet embarqué. Associée à l'ESP32, elle permet d'enregistrer des mesures de capteurs, des logs d'événements, des fichiers de configuration ou encore des données audio.
 
 Dans ce tutoriel, vous apprendrez à :
+
 - Comprendre le protocole SPI utilisé par la carte SD
 - Intégrer un socket SD directement sur un PCB avec l'ESP32
 - Lire et écrire des fichiers via la bibliothèque `SD.h`
@@ -68,7 +69,7 @@ icon="fas fa-info-circle" %}
 La carte SD communique via le protocole **SPI** (Serial Peripheral Interface), un bus série synchrone à 4 fils :
 
 | Signal | Rôle |
-|--------|------|
+| -------- | ------ |
 | **SCK** (Clock) | Horloge générée par le maître (ESP32) |
 | **MOSI** (Master Out Slave In) | Données envoyées par l'ESP32 vers la carte |
 | **MISO** (Master In Slave Out) | Données envoyées par la carte vers l'ESP32 |
@@ -79,7 +80,7 @@ L'ESP32 dispose de deux bus SPI utilisables : **VSPI** (par défaut) et **HSPI**
 ### Broches SPI par défaut (VSPI)
 
 | Fonction | GPIO ESP32 |
-|----------|-----------|
+| ---------- | ----------- |
 | SCK | GPIO 18 |
 | MISO | GPIO 19 |
 | MOSI | GPIO 23 |
@@ -98,6 +99,7 @@ icon="fas fa-microchip" %}
 ### Choix du socket
 
 Il existe deux types de mécanisme de maintien pour les sockets SD :
+
 - **Push-push** : la carte se verrouille par pression, une seconde pression l'éjecte
 - **Push-pull** : la carte s'insère librement et se retire en la tirant
 
@@ -105,7 +107,8 @@ Pour un usage embarqué (risque de vibrations), préférez un socket **push-push
 
 {% include message.html
 title="Format FAT32 obligatoire"
-message="La bibliothèque SD.h de l'ESP32 ne supporte que le système de fichiers FAT32. Formatez votre carte SD en FAT32 avant utilisation. Les cartes > 32 Go sont souvent formatées en exFAT par défaut : il faut les reformater manuellement en FAT32 (utilisez l'outil officiel <a href='https://www.sdcard.org/downloads/formatter/'>SD Card Formatter</a>)."
+message="La bibliothèque SD.h de l'ESP32 ne supporte que le système de fichiers FAT32. Formatez votre carte SD en FAT32 avant utilisation. Les cartes > 32 Go sont souvent formatées en exFAT par défaut : il faut les reformater manuellement en FAT32 (utilisez l'outil officiel [https://www.sdcard.org/downloads/formatter/](SD Card Formatter)."
+
 status="is-warning"
 icon="fas fa-exclamation-triangle" %}
 
@@ -293,7 +296,7 @@ void loop() {}
 
 {% include message.html
 title="Toujours fermer les fichiers"
-message="La bibliothèque SD.h utilise un cache interne. Si vous omettez <code>file.close()</code>, les données peuvent ne pas être physiquement écrites sur la carte en cas de coupure d'alimentation. Appelez <strong>toujours</strong> <code>file.close()</code> après chaque écriture."
+message="La bibliothèque SD.h utilise un cache interne. Si vous omettez `file.close()`, les données peuvent ne pas être physiquement écrites sur la carte en cas de coupure d'alimentation. Appelez **toujours** `file.close()` après chaque écriture."
 status="is-warning"
 icon="fas fa-exclamation-triangle" %}
 

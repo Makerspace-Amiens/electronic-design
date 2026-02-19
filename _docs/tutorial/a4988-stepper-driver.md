@@ -62,6 +62,7 @@ Le **A4988** est un driver de moteur pas-à-pas bipolaire fabriqué par **Allegr
 ### Pourquoi choisir le A4988 ?
 
 Le A4988 est idéal pour les projets nécessitant :
+
 - Une mise en œuvre **rapide et simple** (pas de configuration logicielle)
 - Un **coût minimal**
 - Une **documentation abondante** et une large communauté
@@ -115,13 +116,14 @@ icon="fas fa-info-circle" %}
 greyBackground = true
 title = "Matériel nécessaire"
 content="
-- 1x Module A4988 (format StepStick / Pololu)<br>
-- 1x ESP32 DevKit V1<br>
-- 1x Moteur pas-à-pas bipolaire NEMA 17 (≤ 1A/phase recommandé)<br>
-- 1x Alimentation externe 12V ou 24V (2A minimum)<br>
-- 1x Breadboard<br>
-- Câbles Dupont mâle-mâle et mâle-femelle<br>
-- 1x Condensateur électrolytique 100µF 35V (indispensable)<br>
+
+- 1x Module A4988 (format StepStick / Pololu)
+- 1x ESP32 DevKit V1
+- 1x Moteur pas-à-pas bipolaire NEMA 17 (≤ 1A/phase recommandé)
+- 1x Alimentation externe 12V ou 24V (2A minimum)
+- 1x Breadboard
+- Câbles Dupont mâle-mâle et mâle-femelle
+- 1x Condensateur électrolytique 100µF 35V (indispensable)
 - (Optionnel) Dissipateur thermique autocollant
 " %}
 
@@ -142,28 +144,33 @@ icon="fas fa-exclamation-triangle" %}
 {% include step-tuto.html
 greyBackground = true
 content="
-<strong>Alimentation moteur :</strong><br>
-- VMOT : +12V ou +24V (alimentation externe)<br>
-- GND (côté VMOT) : Masse alimentation moteur<br>
-- Condensateur 100µF entre VMOT et GND (au plus près du module)<br><br>
+**Alimentation moteur :**
 
-<strong>Alimentation logique :</strong><br>
-- VDD : +3.3V depuis l'ESP32<br>
-- GND (côté VDD) : Masse commune avec l'ESP32<br><br>
+- VMOT : +12V ou +24V (alimentation externe)
+- GND (côté VMOT) : Masse alimentation moteur
+- Condensateur 100µF entre VMOT et GND (au plus près du module)
 
-<strong>Signaux de contrôle :</strong><br>
-- STEP : GPIO 26<br>
-- DIR : GPIO 27<br>
-- EN : GPIO 14 (ou relié à GND pour toujours activer)<br>
-- RESET et SLEEP : reliés ensemble (HIGH = actif)<br><br>
+**Alimentation logique :**
 
-<strong>Microstepping (exemple 1/16) (optionnel) :</strong><br>
-- MS1 : 3.3V (GPIO 25 ou VDD)<br>
-- MS2 : 3.3V (GPIO 33 ou VDD)<br>
-- MS3 : 3.3V (GPIO 32 ou VDD)<br><br>
+- VDD : +3.3V depuis l'ESP32
+- GND (côté VDD) : Masse commune avec l'ESP32
 
-<strong>Sorties moteur :</strong><br>
-- 1A, 1B : Bobine A du moteur<br>
+**Signaux de contrôle :**
+
+- STEP : GPIO 26
+- DIR : GPIO 27
+- EN : GPIO 14 (ou relié à GND pour toujours activer)
+- RESET et SLEEP : reliés ensemble (HIGH = actif)
+
+**Microstepping (exemple 1/16) (optionnel) :**
+
+- MS1 : 3.3V (GPIO 25 ou VDD)
+- MS2 : 3.3V (GPIO 33 ou VDD)
+- MS3 : 3.3V (GPIO 32 ou VDD)
+
+**Sorties moteur :**
+
+- 1A, 1B : Bobine A du moteur
 - 2A, 2B : Bobine B du moteur
 "
 image="wiring.jpg" %}
@@ -186,26 +193,30 @@ icon="fas fa-exclamation-triangle" %}
 greyBackground = true
 title = "Réglage du potentiomètre Vref"
 content="
-Le courant maximum délivré au moteur se règle via le potentiomètre sur le module.<br><br>
+Le courant maximum délivré au moteur se règle via le potentiomètre sur le module.
 
-<strong>Formule :</strong><br>
-<code>Imax = Vref / (8 × Rsense)</code><br>
-→ <code>Vref = Imax × 8 × Rsense</code><br><br>
+**Formule :**
+`Imax = Vref / (8 × Rsense)`
+→ `Vref = Imax × 8 × Rsense`
 
-<strong>Valeurs selon le module :</strong><br>
-- Module Pololu original (Rsense = 0.2Ω) : <code>Vref = Imax × 1.6</code><br>
-- Clones courants (Rsense = 0.1Ω) : <code>Vref = Imax × 0.8</code><br>
-- Clones économiques (Rsense = 0.05Ω) : <code>Vref = Imax × 0.4</code><br><br>
+**Valeurs selon le module :**
 
-<strong>Pour identifier votre Rsense :</strong><br>
-- Lire la valeur sur les deux petites résistances CMS situées à côté de la puce<br>
-- Valeurs communes : R200 = 0.2Ω, R100 = 0.1Ω, R050 = 0.05Ω<br><br>
+- Module Pololu original (Rsense = 0.2Ω) : `Vref = Imax × 1.6`
+- Clones courants (Rsense = 0.1Ω) : `Vref = Imax × 0.8`
+- Clones économiques (Rsense = 0.05Ω) : `Vref = Imax × 0.4`
 
-<strong>Procédure :</strong><br>
-1. Alimenter VDD (3.3V) <strong>sans alimenter VMOT</strong><br>
-2. Mesurer au multimètre entre la vis du potentiomètre et GND<br>
-3. Ajuster avec un tournevis céramique ou plastique<br>
+**Pour identifier votre Rsense :**
+
+- Lire la valeur sur les deux petites résistances CMS situées à côté de la puce
+- Valeurs communes : R200 = 0.2Ω, R100 = 0.1Ω, R050 = 0.05Ω
+
+**Procédure :**
+
+1. Alimenter VDD (3.3V) **sans alimenter VMOT**
+2. Mesurer au multimètre entre la vis du potentiomètre et GND
+3. Ajuster avec un tournevis céramique ou plastique
 4. Commencer à 50% du courant nominal, tester, puis ajuster
+
 " %}
 
 {% include message.html
@@ -274,12 +285,14 @@ void rotate(int steps, int delayMicros) {
 greyBackground = true
 title = "Test et vérification"
 content="
-1. Uploadez le code sur votre ESP32<br>
-2. Ouvrez le moniteur série (115200 bauds)<br>
-3. Le moteur devrait effectuer 1 tour dans chaque sens en alternance<br>
-4. Si le moteur ne tourne pas → vérifiez que RESET et SLEEP sont reliés ensemble<br>
-5. Si le moteur chauffe sans bouger → courant trop élevé, réduire Vref<br>
+
+1. Uploadez le code sur votre ESP32
+2. Ouvrez le moniteur série (115200 bauds)
+3. Le moteur devrait effectuer 1 tour dans chaque sens en alternance
+4. Si le moteur ne tourne pas → vérifiez que RESET et SLEEP sont reliés ensemble
+5. Si le moteur chauffe sans bouger → courant trop élevé, réduire Vref
 6. Si le moteur vibre sans avancer → inverser les fils d'une bobine
+
 " %}
 
 ### Code 2 : Utilisation avec AccelStepper
@@ -344,16 +357,19 @@ Après validation du prototype sur breadboard, intégrons le module A4988 sur un
 greyBackground = true
 title = "Considérations de routage"
 content="
-<strong>Pistes de puissance (VMOT, GND moteur) :</strong><br>
-- Largeur minimum : 1.5mm (pour 2A)<br>
-- Idéalement : 2-3mm<br>
+**Pistes de puissance (VMOT, GND moteur) :**
 
-<strong>Découplage :</strong><br>
-- C1 (100µF) : au plus près de VMOT, entre VMOT et GND<br>
+- Largeur minimum : 1.5mm (pour 2A)
+- Idéalement : 2-3mm
+
+**Découplage :**
+
+- C1 (100µF) : au plus près de VMOT, entre VMOT et GND
 Le reste du découplage est présent directement sur le module.
 
-<strong>Signaux de contrôle :</strong><br>
-- STEP, DIR : pistes courtes, éloignées des pistes de puissance<br>
+**Signaux de contrôle :**
+
+- STEP, DIR : pistes courtes, éloignées des pistes de puissance
 - MS1/MS2/MS3 : peuvent être câblées fixes (straps) ou sur connecteur avec jumpers
 " %}
 
@@ -367,12 +383,13 @@ Le reste du découplage est présent directement sur le module.
 greyBackground = true
 title = "Vérifications pré-power"
 content="
-<strong>Avant de brancher quoi que ce soit :</strong><br>
-- Inspecter toutes les soudures <br>
-- Vérifier l'absence de court-circuit (multimètre en mode continuité) :<br>
-&nbsp;&nbsp;&nbsp;- VMOT → GND : doit se comporter comme un condensateur, pas comme un court-circuit<br>
-&nbsp;&nbsp;&nbsp;- VDD → GND : résistance > 1kΩ<br>
-- Vérifier la polarité du condensateur électrolytique C1<br>
+**Avant de brancher quoi que ce soit :**
+
+- Inspecter toutes les soudures
+- Vérifier l'absence de court-circuit (multimètre en mode continuité) :
+  - VMOT → GND : doit se comporter comme un condensateur, pas comme un court-circuit
+  - VDD → GND : résistance > 1kΩ
+- Vérifier la polarité du condensateur électrolytique C1
 - Vérifier les connexions moteur (résistance de 2 à 6Ω par bobine)
 " %}
 
@@ -382,25 +399,30 @@ content="
 greyBackground = true
 title = "Mise sous tension en 4 étapes"
 content="
-<strong>Étape 1 : Test logique seul</strong><br>
-- Alimenter uniquement VDD (3.3V depuis l'ESP32), sans VMOT<br>
-- Vérifier VDD = 3.3V sur le connecteur<br>
-- Le driver ne doit pas chauffer<br><br>
 
-<strong>Étape 2 : Réglage Vref</strong><br>
-- Toujours avec seulement VDD alimenté<br>
-- Mesurer entre la vis du potentiomètre et GND<br>
-- Ajuster à la valeur cible (voir formule Vref)<br><br>
+#### Étape 1 : Test logique seul**
 
-<strong>Étape 3 : Test VMOT sans moteur</strong><br>
-- Alimenter VMOT (12V) avec une alimentation à courant limité (< 500mA)<br>
-- Le driver ne doit pas chauffer sans moteur connecté<br>
-- Envoyer quelques impulsions STEP depuis l'ESP32 : aucune fumée ni odeur<br><br>
+- Alimenter uniquement VDD (3.3V depuis l'ESP32), sans VMOT
+- Vérifier VDD = 3.3V sur le connecteur
+- Le driver ne doit pas chauffer
 
-<strong>Étape 4 : Test complet avec moteur</strong><br>
-- Connecter le moteur<br>
-- Faire tourner le moteur pendant 30 secondes<br>
-- Toucher le driver : tiède (< 60°C) = normal<br>
+#### Étape 2 : Réglage Vref**
+
+- Toujours avec seulement VDD alimenté
+- Mesurer entre la vis du potentiomètre et GND
+- Ajuster à la valeur cible (voir formule Vref)
+
+#### Étape 3 : Test VMOT sans moteur**
+
+- Alimenter VMOT (12V) avec une alimentation à courant limité (< 500mA)
+- Le driver ne doit pas chauffer sans moteur connecté
+- Envoyer quelques impulsions STEP depuis l'ESP32 : aucune fumée ni odeur
+
+#### Étape 4 : Test complet avec moteur**
+
+- Connecter le moteur
+- Faire tourner le moteur pendant 30 secondes
+- Toucher le driver : tiède (< 60°C) = normal
 - Trop chaud pour être tenu (> 80°C) = courant trop élevé ou dissipation insuffisante
 " %}
 
@@ -420,12 +442,13 @@ icon="fas fa-thermometer-full" %}
 greyBackground = true
 title = "Checklist diagnostic"
 content="
-- RESET et SLEEP sont-ils reliés ensemble ou à 3.3V ?<br>
-- EN est-il à LOW (actif) ? (souvent inversé par erreur)<br>
-- VMOT est-il bien alimenté (8-35V) ?<br>
-- VDD est-il bien à 3.3V ?<br>
-- Le condensateur 100µF est-il présent et correctement câblé ?<br>
-- Vref est-il > 0V ? (sinon le courant est nul et le moteur reste bloqué)<br>
+
+- RESET et SLEEP sont-ils reliés ensemble ou à 3.3V ?
+- EN est-il à LOW (actif) ? (souvent inversé par erreur)
+- VMOT est-il bien alimenté (8-35V) ?
+- VDD est-il bien à 3.3V ?
+- Le condensateur 100µF est-il présent et correctement câblé ?
+- Vref est-il > 0V ? (sinon le courant est nul et le moteur reste bloqué)
 - Tester avec un code blink sur STEP_PIN pour vérifier que le signal arrive bien
 " %}
 
@@ -435,11 +458,12 @@ content="
 greyBackground = true
 title = "Causes et solutions"
 content="
-1. <strong>Bobines inversées</strong> : Inverser les deux fils d'une bobine (1A↔1B ou 2A↔2B)<br>
-2. <strong>Courant trop faible</strong> : Augmenter Vref de 10% et retester<br>
-3. <strong>Vitesse trop rapide</strong> : Augmenter le délai entre steps (minimum 500µs en full step)<br>
-4. <strong>Alimentation insuffisante</strong> : Vérifier que la PSU peut fournir au moins 1.5A sous 12V<br>
-5. <strong>Mauvaise identification des bobines</strong> : Mesurer avec un multimètre — les fils d'une même bobine ont une résistance de 2 à 6Ω entre eux
+
+1. **Bobines inversées** : Inverser les deux fils d'une bobine (1A↔1B ou 2A↔2B)
+2. **Courant trop faible** : Augmenter Vref de 10% et retester
+3. **Vitesse trop rapide** : Augmenter le délai entre steps (minimum 500µs en full step)
+4. **Alimentation insuffisante** : Vérifier que la PSU peut fournir au moins 1.5A sous 12V
+5. **Mauvaise identification des bobines** : Mesurer avec un multimètre — les fils d'une même bobine ont une résistance de 2 à 6Ω entre eux
 " %}
 
 ### Le driver chauffe trop
@@ -448,10 +472,11 @@ content="
 greyBackground = true
 title = "Réduire la température"
 content="
-- Réduire Vref de 20% (courant inutilement élevé ?)<br>
-- Coller un dissipateur thermique sur la puce<br>
-- Ajouter un flux d'air (ventilateur 40mm)<br>
-- Utiliser un mode de microstepping plus élevé (moins de pertes par commutation)<br>
+
+- Réduire Vref de 20% (courant inutilement élevé ?)
+- Coller un dissipateur thermique sur la puce
+- Ajouter un flux d'air (ventilateur 40mm)
+- Utiliser un mode de microstepping plus élevé (moins de pertes par commutation)
 - Mettre le driver en SLEEP quand le moteur ne bouge pas
 " %}
 
@@ -461,13 +486,13 @@ content="
 greyBackground = true
 title = "Réduire le bruit moteur"
 content="
-Le A4988 est naturellement plus bruyant que les drivers de la gamme TMC.<br>
-Ces techniques permettent d'atténuer le bruit :<br><br>
+Le A4988 est naturellement plus bruyant que les drivers de la gamme TMC.
+Ces techniques permettent d'atténuer le bruit :
 
-1. <strong>Passer en 1/16 step</strong> : réduction significative du bruit à basse vitesse<br>
-2. <strong>Réduire le courant</strong> : moins de courant = moins de vibrations magnétiques<br>
-3. <strong>Accélération douce</strong> : éviter les démarrages brutaux<br>
-4. <strong>Fréquence de découpage</strong> : impossible à modifier sur le A4988 (fixée par ROSC)<br><br>
+1. **Passer en 1/16 step** : réduction significative du bruit à basse vitesse
+2. **Réduire le courant** : moins de courant = moins de vibrations magnétiques
+3. **Accélération douce** : éviter les démarrages brutaux
+4. **Fréquence de découpage** : impossible à modifier sur le A4988 (fixée par ROSC)
 
 Si le bruit est critique pour votre application, considérez un driver TMC2209 ou TMC2208 qui offrent un mode silencieux (StealthChop).
 " %}
@@ -503,6 +528,7 @@ Le **A4988** est un driver incontournable pour débuter avec les moteurs pas-à-
 ### Prochaines étapes
 
 Maintenant que vous maîtrisez le A4988 avec l'ESP32, explorez :
+
 - Le driver **DRV8825** : courant plus élevé (2.2A), microstepping jusqu'à 1/32
 - Le driver **TMC2209** : mode silencieux (StealthChop), configuration UART, StallGuard
 - La bibliothèque **AccelStepper** pour gérer plusieurs moteurs simultanément

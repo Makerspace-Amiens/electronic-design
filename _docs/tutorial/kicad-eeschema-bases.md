@@ -58,12 +58,12 @@ image="kicad-main.png" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Créer un nouveau projet"
-content="Cliquez sur <strong>Fichier > Nouveau Projet</strong> ou utilisez le raccourci <strong>Ctrl+N</strong> (Cmd+N sur macOS). Choisissez un emplacement pour votre projet et donnez-lui un nom significatif, par exemple 'mon-premier-schema'." %}
+content="Cliquez sur **Fichier > Nouveau Projet** ou utilisez le raccourci **Ctrl+N** (Cmd+N sur macOS). Choisissez un emplacement pour votre projet et donnez-lui un nom significatif, par exemple 'mon-premier-schema'." %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Ouvrir l'éditeur de schémas"
-content="Une fois le projet créé, double-cliquez sur le fichier .kicad_sch dans le gestionnaire de projets, ou cliquez sur l'icône <strong>Éditeur de schémas</strong> dans la barre d'outils. Eeschema s'ouvre avec une feuille vierge."
+content="Une fois le projet créé, double-cliquez sur le fichier .kicad_sch dans le gestionnaire de projets, ou cliquez sur l'icône **Éditeur de schémas** dans la barre d'outils. Eeschema s'ouvre avec une feuille vierge."
 image="ouvrir-eeschema.png" %}
 
 {% include message.html
@@ -79,26 +79,28 @@ icon="fas fa-folder" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Les zones de l'interface"
-content="L'interface d'Eeschema est divisée en plusieurs zones :<br>
-<strong>1. Barre d'outils supérieure</strong> : Outils principaux (sauvegarder, annuler, zoom, etc.)<br>
-<strong>2. Barre d'outils verticale droite</strong> : Outils de dessin et placement<br>
-<strong>3. Zone de dessin centrale</strong> : Votre schéma<br>
-<strong>4. Arborescence à gauche</strong> : Navigation entre les feuilles<br>
-<strong>5. Barre de messages en bas</strong> : Informations et coordonnées"
+content="L'interface d'Eeschema est divisée en plusieurs zones :
+
+**1. Barre d'outils supérieure** : Outils principaux (sauvegarder, annuler, zoom, etc.)
+**2. Barre d'outils verticale droite** : Outils de dessin et placement
+**3. Zone de dessin centrale** : Votre schéma
+**4. Arborescence à gauche** : Navigation entre les feuilles
+**5. Barre de messages en bas** : Informations et coordonnées"
 image="interface-eeschema.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Raccourcis clavier essentiels"
-content="Mémorisez ces raccourcis pour gagner en efficacité :<br>
-<strong>A</strong> : Ajouter un composant (Add symbol)<br>
-<strong>W</strong> : Tracer un fil (Wire)<br>
-<strong>L</strong> : Ajouter un label<br>
-<strong>M</strong> : Déplacer un élément<br>
-<strong>R</strong> : Pivoter un élément<br>
-<strong>E</strong> : Éditer les propriétés<br>
-<strong>Delete</strong> : Supprimer un élément<br>
-<strong>Échap</strong> : Annuler l'action en cours" %}
+content="Mémorisez ces raccourcis pour gagner en efficacité :
+
+**A** : Ajouter un composant (Add symbol)
+**W** : Tracer un fil (Wire)
+**L** : Ajouter un label
+**M** : Déplacer un élément
+**R** : Pivoter un élément
+**E** : Éditer les propriétés
+**Delete** : Supprimer un élément
+**Échap** : Annuler l'action en cours" %}
 
 {% include message.html
 title="Astuce - Zoom"
@@ -113,37 +115,42 @@ icon="fas fa-mouse" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Ouvrir le sélecteur de composants"
-content="Appuyez sur la touche <strong>A</strong> ou cliquez sur l'icône 'Ajouter un symbole' dans la barre d'outils droite. Une fenêtre de sélection de composants s'ouvre."
+content="Appuyez sur la touche **A** ou cliquez sur l'icône 'Ajouter un symbole' dans la barre d'outils droite. Une fenêtre de sélection de composants s'ouvre."
 image="ajouter-composant.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Rechercher un composant"
-content="Dans le champ de recherche, tapez le nom du composant souhaité. Par exemple :<br>
-- <code>R</code> pour une résistance<br>
-- <code>C</code> pour un condensateur<br>
-- <code>LED</code> pour une LED<br>
-- <code>GND</code> pour la masse<br>
+content="Dans le champ de recherche, tapez le nom du composant souhaité. Par exemple :
+
+- `R` pour une résistance
+- `C` pour un condensateur
+- `LED` pour une LED
+- `GND` pour la masse
+
 Utilisez les filtres pour affiner votre recherche si nécessaire."
 image="recherche-composant.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Placer le composant"
-content="Double-cliquez sur le composant choisi ou appuyez sur <strong>Entrée</strong>. Le composant s'attache à votre curseur. Déplacez-le à l'emplacement souhaité et cliquez pour le placer. Vous pouvez :<br>
-- Appuyer sur <strong>R</strong> pour le pivoter avant de cliquer<br>
-- Appuyer sur <strong>X</strong> ou <strong>Y</strong> pour le retourner horizontalement/verticalement<br>
-- Appuyer sur <strong>Échap</strong> pour annuler"
+content="Double-cliquez sur le composant choisi ou appuyez sur **Entrée**. Le composant s'attache à votre curseur. Déplacez-le à l'emplacement souhaité et cliquez pour le placer. Vous pouvez :
+
+- Appuyer sur **R** pour le pivoter avant de cliquer
+- Appuyer sur **X** ou **Y** pour le retourner horizontalement/verticalement
+- Appuyer sur **Échap** pour annuler"
 image="placer-composant.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 4 : Placer plusieurs composants"
-content="Créons un circuit simple LED avec résistance :<br>
-1. Placez une <strong>LED</strong> (cherchez 'LED')<br>
-2. Placez une <strong>résistance</strong> (cherchez 'R')<br>
-3. Placez un symbole <strong>+5V</strong> (cherchez '+5V' dans Device)<br>
-4. Placez deux symboles <strong>GND</strong> (masse)<br>
+content="Créons un circuit simple LED avec résistance :
+
+1. Placez une **LED** (cherchez 'LED')
+2. Placez une **résistance** (cherchez 'R')
+3. Placez un symbole **+5V** (cherchez '+5V' dans Device)
+4. Placez deux symboles **GND** (masse)
+
 Disposez-les de manière logique sur votre schéma."
 image="placer-composant.png" %}
 
@@ -160,32 +167,35 @@ icon="fas fa-book" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Activer l'outil fil"
-content="Appuyez sur la touche <strong>W</strong> (Wire) ou cliquez sur l'icône 'Tracer un fil' dans la barre d'outils droite. Le curseur se transforme en croix."
+content="Appuyez sur la touche **W** (Wire) ou cliquez sur l'icône 'Tracer un fil' dans la barre d'outils droite. Le curseur se transforme en croix."
 image="outil-fil.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Tracer des connexions"
-content="Cliquez sur l'extrémité d'une broche d'un composant pour commencer le fil. Le fil suit votre curseur. Cliquez à nouveau pour créer un point d'ancrage ou terminer sur une autre broche. Le fil devient vert quand il est correctement connecté à une broche.<br><br>
-<strong>Astuces :</strong><br>
-- Double-clic pour terminer le fil sans connexion<br>
-- Les fils se connectent automatiquement aux broches quand vous êtes dessus<br>
-- Appuyez sur <strong>Échap</strong> pour annuler"
+content="Cliquez sur l'extrémité d'une broche d'un composant pour commencer le fil. Le fil suit votre curseur. Cliquez à nouveau pour créer un point d'ancrage ou terminer sur une autre broche. Le fil devient vert quand il est correctement connecté à une broche.
+
+**Astuces :**
+- Double-clic pour terminer le fil sans connexion
+- Les fils se connectent automatiquement aux broches quand vous êtes dessus
+- Appuyez sur **Échap** pour annuler"
 image="tracer-fils.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Créer des jonctions"
-content="Lorsque deux fils se croisent et doivent être connectés, placez une <strong>jonction</strong> (point de connexion). KiCAD le fait généralement automatiquement, mais vous pouvez en ajouter manuellement : cliquez sur l'icône jonction ou utilisez le menu clic droit > Ajouter une jonction."
+content="Lorsque deux fils se croisent et doivent être connectés, placez une **jonction** (point de connexion). KiCAD le fait généralement automatiquement, mais vous pouvez en ajouter manuellement : cliquez sur l'icône jonction ou utilisez le menu clic droit > Ajouter une jonction."
 image="jonctions.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 4 : Connecter votre circuit LED"
-content="Connectez les composants de votre circuit :<br>
-1. Connectez <strong>+5V</strong> à une broche de la résistance<br>
-2. Connectez l'autre broche de la résistance à l'anode de la LED (broche +)<br>
-3. Connectez la cathode de la LED (broche -) à <strong>GND</strong><br>
+content="Connectez les composants de votre circuit :
+
+1. Connectez **+5V** à une broche de la résistance
+2. Connectez l'autre broche de la résistance à l'anode de la LED (broche +)
+3. Connectez la cathode de la LED (broche -) à **GND**
+
 Votre premier circuit est maintenant câblé !" %}
 
 {% include message.html
@@ -201,33 +211,38 @@ icon="fas fa-bolt" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Éditer les valeurs des composants"
-content="Survolez un composant et appuyez sur <strong>E</strong> (Edit) ou double-cliquez dessus. Une fenêtre de propriétés s'ouvre. Modifiez :<br>
-- <strong>Value</strong> : la valeur du composant (ex: 220R pour une résistance de 220Ω)<br>
-- <strong>Reference</strong> : sera généré automatiquement lors de l'annotation<br>
-- <strong>Footprint</strong> : l'empreinte physique (nous verrons ça plus tard)<br>
+content="Survolez un composant et appuyez sur **E** (Edit) ou double-cliquez dessus. Une fenêtre de propriétés s'ouvre. Modifiez :
+
+- **Value** : la valeur du composant (ex: 220R pour une résistance de 220Ω)
+- **Reference** : sera généré automatiquement lors de l'annotation
+- **Footprint** : l'empreinte physique (nous verrons ça plus tard)
+
 Validez avec OK."
 image="editer-valeur.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Ajouter des valeurs à vos composants"
-content="Éditez vos composants pour leur donner des valeurs réalistes :<br>
-- Résistance : <code>220R</code> ou <code>220</code><br>
-- LED : <code>Red</code> ou <code>LED_Red</code><br>
+content="Éditez vos composants pour leur donner des valeurs réalistes :
+
+- Résistance : `220R` ou `220`
+- LED : `Red` ou `LED_Red`
+
 Ces informations apparaissent sur le schéma et seront utiles pour la suite."
 image="valeurs-composants.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Ajouter des labels de nets"
-content="Les labels permettent de nommer des connexions sans tracer de fils. Appuyez sur <strong>L</strong> (Label) ou cliquez sur l'icône correspondante. Tapez un nom (ex: 'LED_ANODE') et placez le label sur un fil. Tous les fils portant le même label sont connectés entre eux.<br><br>
+content="Les labels permettent de nommer des connexions sans tracer de fils. Appuyez sur **L** (Label) ou cliquez sur l'icône correspondante. Tapez un nom (ex: 'LED_ANODE') et placez le label sur un fil. Tous les fils portant le même label sont connectés entre eux.
+
 C'est particulièrement utile pour les schémas complexes ou multi-feuilles."
 image="labels.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 4 : Ajouter des notes et du texte"
-content="Pour documenter votre schéma, vous pouvez ajouter du texte libre. Cliquez sur l'icône 'T' (Texte) dans la barre d'outils droite, ou allez dans <strong>Placer > Texte</strong>. Ajoutez des commentaires, des notes de version, ou toute information pertinente." %}
+content="Pour documenter votre schéma, vous pouvez ajouter du texte libre. Cliquez sur l'icône 'T' (Texte) dans la barre d'outils droite, ou allez dans **Placer > Texte**. Ajoutez des commentaires, des notes de version, ou toute information pertinente." %}
 
 {% include message.html
 title="Bonnes pratiques - Documentation"
@@ -242,26 +257,30 @@ icon="fas fa-file-alt" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Qu'est-ce que l'annotation ?"
-content="L'annotation attribue automatiquement des références uniques à tous vos composants. Par exemple :<br>
-- Les résistances deviennent R1, R2, R3...<br>
-- Les condensateurs deviennent C1, C2, C3...<br>
-- Les circuits intégrés deviennent U1, U2, U3...<br>
+content="L'annotation attribue automatiquement des références uniques à tous vos composants. Par exemple :
+
+- Les résistances deviennent R1, R2, R3...
+- Les condensateurs deviennent C1, C2, C3...
+- Les circuits intégrés deviennent U1, U2, U3...
+
 C'est une étape essentielle avant de créer le PCB." %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Ouvrir l'outil d'annotation"
-content="Allez dans <strong>Outils > Annoter les symboles</strong> ou cliquez sur l'icône correspondante dans la barre d'outils. Une fenêtre d'annotation s'ouvre avec plusieurs options."
+content="Allez dans **Outils > Annoter les symboles** ou cliquez sur l'icône correspondante dans la barre d'outils. Une fenêtre d'annotation s'ouvre avec plusieurs options."
 image="annoter.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Configurer et annoter"
-content="Dans la fenêtre d'annotation :<br>
-- <strong>Étendue</strong> : Sélectionnez 'Utiliser le schéma entier' pour annoter tout<br>
-- <strong>Ordre</strong> : Choisissez de préférence 'Horizontal puis vertical' ou 'Vertical puis horizontal'<br>
-- <strong>Options</strong> : Laissez les options par défaut pour commencer<br>
-Cliquez sur <strong>Annoter</strong>, puis <strong>OK</strong> pour confirmer."
+content="Dans la fenêtre d'annotation :
+
+- **Étendue** : Sélectionnez 'Utiliser le schéma entier' pour annoter tout
+- **Ordre** : Choisissez de préférence 'Horizontal puis vertical' ou 'Vertical puis horizontal'
+- **Options** : Laissez les options par défaut pour commencer
+
+Cliquez sur **Annoter**, puis **OK** pour confirmer."
 image="annoter.png" %}
 
 {% include step-tuto.html
@@ -282,42 +301,47 @@ icon="fas fa-redo" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Qu'est-ce que l'ERC ?"
-content="L'ERC (Electrical Rule Check) est un outil qui vérifie automatiquement votre schéma pour détecter les erreurs courantes :<br>
-- Broches non connectées<br>
-- Conflits entre sorties<br>
-- Labels non utilisés<br>
-- Symboles d'alimentation manquants<br>
+content="L'ERC (Electrical Rule Check) est un outil qui vérifie automatiquement votre schéma pour détecter les erreurs courantes :
+
+- Broches non connectées
+- Conflits entre sorties
+- Labels non utilisés
+- Symboles d'alimentation manquants
+
 C'est une étape cruciale avant de passer au PCB." %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Lancer l'ERC"
-content="Allez dans <strong>Inspecter > Vérificateur de règles électriques</strong> ou cliquez sur l'icône coccinelle/vérification dans la barre d'outils. La fenêtre ERC s'ouvre."
+content="Allez dans **Inspecter > Vérificateur de règles électriques** ou cliquez sur l'icône coccinelle/vérification dans la barre d'outils. La fenêtre ERC s'ouvre."
 image="lancer-erc.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Exécuter la vérification"
-content="Cliquez sur le bouton <strong>Exécuter ERC</strong>. L'outil analyse votre schéma et affiche les erreurs et avertissements trouvés. Chaque problème est listé avec :<br>
-- Le type (erreur ou avertissement)<br>
-- Une description du problème<br>
+content="Cliquez sur le bouton **Exécuter ERC**. L'outil analyse votre schéma et affiche les erreurs et avertissements trouvés. Chaque problème est listé avec :
+
+- Le type (erreur ou avertissement)
+- Une description du problème
 - L'emplacement sur le schéma"
 image="executer-erc.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Corriger les erreurs"
-content="Double-cliquez sur une erreur dans la liste pour naviguer vers l'élément concerné sur le schéma. Corrigez les problèmes :<br>
-- Connectez les broches non connectées<br>
-- Ajoutez des drapeaux 'Non connecté' (No Connect) sur les broches intentionnellement non utilisées<br>
-- Vérifiez les connexions d'alimentation<br>
+content="Double-cliquez sur une erreur dans la liste pour naviguer vers l'élément concerné sur le schéma. Corrigez les problèmes :
+
+- Connectez les broches non connectées
+- Ajoutez des drapeaux 'Non connecté' (No Connect) sur les broches intentionnellement non utilisées
+- Vérifiez les connexions d'alimentation
+
 Relancez l'ERC jusqu'à obtenir 0 erreur."
 image="corriger-erreurs.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 4 : Drapeaux No Connect"
-content="Pour les broches intentionnellement non connectées, placez un drapeau 'No Connect' pour indiquer à l'ERC que c'est voulu. Cliquez sur l'icône 'X' dans la barre d'outils droite ou appuyez sur <strong>Q</strong>, puis cliquez sur la broche."
+content="Pour les broches intentionnellement non connectées, placez un drapeau 'No Connect' pour indiquer à l'ERC que c'est voulu. Cliquez sur l'icône 'X' dans la barre d'outils droite ou appuyez sur **Q**, puis cliquez sur la broche."
 image="no-connect.png" %}
 
 {% include message.html
@@ -333,18 +357,19 @@ icon="fas fa-exclamation-triangle" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Cartouche d'informations"
-content="Dans le coin inférieur droit de votre schéma se trouve le cartouche (title block). Cliquez dessus pour le modifier. Remplissez :<br>
-- <strong>Title</strong> : Le titre de votre projet<br>
-- <strong>Company</strong> : Votre nom ou organisation<br>
-- <strong>Date</strong> : Date de création/modification<br>
-- <strong>Revision</strong> : Version du schéma (v1.0, v1.1, etc.)<br>
-- <strong>Comment</strong> : Notes additionnelles"
+content="Dans le coin inférieur droit de votre schéma se trouve le cartouche (title block). Cliquez dessus pour le modifier. Remplissez :
+
+- **Title** : Le titre de votre projet
+- **Company** : Votre nom ou organisation
+- **Date** : Date de création/modification
+- **Revision** : Version du schéma (v1.0, v1.1, etc.)
+- **Comment** : Notes additionnelles"
 image="cartouche.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Sauvegarder votre travail"
-content="Sauvegardez régulièrement votre schéma avec <strong>Ctrl+S</strong> (Cmd+S sur macOS) ou <strong>Fichier > Enregistrer</strong>. KiCAD crée automatiquement des fichiers de sauvegarde (backup) pour éviter les pertes de données." %}
+content="Sauvegardez régulièrement votre schéma avec **Ctrl+S** (Cmd+S sur macOS) ou **Fichier > Enregistrer**. KiCAD crée automatiquement des fichiers de sauvegarde (backup) pour éviter les pertes de données." %}
 
 {% include message.html
 title="Conseil - Versioning"
@@ -359,11 +384,13 @@ icon="fas fa-code-branch" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Exporter en PDF"
-content="Pour partager ou archiver votre schéma, exportez-le en PDF :<br>
-1. Allez dans <strong>Fichier > Tracer</strong><br>
-2. Sélectionnez le format <strong>PDF</strong><br>
-3. Choisissez les options (couleur ou noir & blanc, une page ou tout le schéma)<br>
-4. Cliquez sur <strong>Tracer le schéma</strong><br>
+content="Pour partager ou archiver votre schéma, exportez-le en PDF :
+
+1. Allez dans **Fichier > Tracer**
+2. Sélectionnez le format **PDF**
+3. Choisissez les options (couleur ou noir & blanc, une page ou tout le schéma)
+4. Cliquez sur **Tracer le schéma**
+
 Le PDF est créé dans le dossier de votre projet."
 image="export-pdf.png" %}
 

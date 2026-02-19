@@ -65,7 +65,7 @@ icon="fas fa-info-circle" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Téléchargement"
-content="Rendez-vous sur le site officiel de VSCode à l'adresse [https://code.visualstudio.com/](https://code.visualstudio.com/). Cliquez sur le bouton de téléchargement pour Windows. Le fichier d'installation (<strong>VSCodeUserSetup-x64.exe</strong>) sera téléchargé." %}
+content="Rendez-vous sur le site officiel de VSCode à l'adresse [https://code.visualstudio.com/](https://code.visualstudio.com/). Cliquez sur le bouton de téléchargement pour Windows. Le fichier d'installation (**VSCodeUserSetup-x64.exe**) sera téléchargé." %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -75,47 +75,51 @@ content="Double-cliquez sur le fichier téléchargé pour lancer l'installation.
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Options d'installation"
-content="Cochez les options suivantes (recommandées) :<br>
-- Ajouter l'action 'Ouvrir avec Code' au menu contextuel des fichiers<br>
-- Ajouter l'action 'Ouvrir avec Code' au menu contextuel des répertoires<br>
-- Ajouter à PATH (important pour PlatformIO)<br>
-- Créer une icône sur le bureau<br><br>
-Cliquez sur <strong>Suivant</strong> puis <strong>Installer</strong>." %}
+content="Cochez les options suivantes (recommandées) :
+
+- Ajouter l'action 'Ouvrir avec Code' au menu contextuel des fichiers
+- Ajouter l'action 'Ouvrir avec Code' au menu contextuel des répertoires
+- Ajouter à PATH (important pour PlatformIO)
+- Créer une icône sur le bureau
+
+Cliquez sur **Suivant** puis **Installer**." %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 4 : Finalisation"
-content="Une fois l'installation terminée, cochez <strong>Lancer Visual Studio Code</strong> et cliquez sur <strong>Terminer</strong>. VSCode se lance pour la première fois." %}
+content="Une fois l'installation terminée, cochez **Lancer Visual Studio Code** et cliquez sur **Terminer**. VSCode se lance pour la première fois." %}
 
 ### Installation sur macOS
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Téléchargement"
-content="Rendez-vous sur [https://code.visualstudio.com/](https://code.visualstudio.com/). Téléchargez la version correspondant à votre processeur :<br>
-- <strong>Apple Silicon</strong> (M1, M2, M3, M4) : Télécharger .zip<br>
-- <strong>Intel</strong> : Télécharger .zip" %}
+content="Rendez-vous sur [https://code.visualstudio.com/](https://code.visualstudio.com/). Téléchargez la version correspondant à votre processeur :
+
+- **Apple Silicon** (M1, M2, M3, M4) : Télécharger .zip
+- **Intel** : Télécharger .zip" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Installation"
-content="1. Double-cliquez sur le fichier .zip téléchargé pour le décompresser<br>
-2. Glissez-déposez <strong>Visual Studio Code.app</strong> dans le dossier <strong>Applications</strong><br>
+content="1. Double-cliquez sur le fichier .zip téléchargé pour le décompresser
+2. Glissez-déposez **Visual Studio Code.app** dans le dossier **Applications**
 3. Ouvrez le dossier Applications et double-cliquez sur Visual Studio Code" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Premier lancement"
-content="Si macOS affiche un message de sécurité, allez dans <strong>Préférences Système > Confidentialité et sécurité</strong>, puis autorisez l'exécution de Visual Studio Code." %}
+content="Si macOS affiche un message de sécurité, allez dans **Préférences Système > Confidentialité et sécurité**, puis autorisez l'exécution de Visual Studio Code." %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 4 : Installer 'code' dans le PATH"
-content="Pour utiliser VSCode depuis le terminal (utile pour PlatformIO) :<br>
-1. Ouvrez VSCode<br>
-2. Appuyez sur <strong>Cmd+Shift+P</strong> pour ouvrir la palette de commandes<br>
-3. Tapez <strong>shell command</strong><br>
-4. Sélectionnez <strong>Shell Command: Install 'code' command in PATH</strong><br>
+content="Pour utiliser VSCode depuis le terminal (utile pour PlatformIO) :
+
+1. Ouvrez VSCode
+2. Appuyez sur **Cmd+Shift+P** pour ouvrir la palette de commandes
+3. Tapez **shell command**
+4. Sélectionnez **Shell Command: Install 'code' command in PATH**
 5. Validez avec Entrée" %}
 
 ### Installation sur Linux
@@ -123,35 +127,47 @@ content="Pour utiliser VSCode depuis le terminal (utile pour PlatformIO) :<br>
 {% include step-tuto.html
 greyBackground = true
 title = "Ubuntu / Debian (méthode recommandée)"
-content="Téléchargez et installez le paquet .deb depuis le site officiel :<br><br>
-1. Allez sur [https://code.visualstudio.com/](https://code.visualstudio.com/)<br>
-2. Téléchargez le fichier <strong>.deb</strong><br>
-3. Installez avec :<br>
-<code>sudo apt install ./code_*.deb</code><br><br>
-Ou via le dépôt officiel :<br>
-<code>wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg</code><br>
-<code>sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/</code><br>
-<code>sudo sh -c 'echo \"deb [arch=amd64] https://packages.microsoft.com/repos/code stable main\" > /etc/apt/sources.list.d/vscode.list'</code><br>
-<code>sudo apt update</code><br>
-<code>sudo apt install code</code>" %}
+content="Téléchargez et installez le paquet .deb depuis le site officiel :
+
+1. Allez sur [https://code.visualstudio.com/](https://code.visualstudio.com/)
+2. Téléchargez le fichier **.deb**
+3. Installez avec :
+`sudo apt install ./code_*.deb`
+
+Ou via le dépôt officiel :
+```
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo \"deb [arch=amd64] https://packages.microsoft.com/repos/code stable main\" > /etc/apt/sources.list.d/vscode.list'
+sudo apt update
+sudo apt install code
+```" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Fedora / Red Hat / CentOS"
-content="Installez le paquet RPM :<br><br>
-<code>sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc</code><br>
-<code>sudo sh -c 'echo -e \"[code]\\nname=Visual Studio Code\\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\\nenabled=1\\ngpgcheck=1\\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\" > /etc/yum.repos.d/vscode.repo'</code><br><br>
-Puis :<br>
-<code>sudo dnf check-update</code><br>
-<code>sudo dnf install code</code>" %}
+content="Installez le paquet RPM :
+
+```
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e \"[code]\\nname=Visual Studio Code\\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\\nenabled=1\\ngpgcheck=1\\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\" > /etc/yum.repos.d/vscode.repo'
+```
+
+Puis :
+```
+sudo dnf check-update
+sudo dnf install code
+```" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Arch Linux"
-content="VSCode est disponible dans AUR :<br><br>
-<code>yay -S visual-studio-code-bin</code><br><br>
-Ou utilisez Snap :<br>
-<code>sudo snap install code --classic</code>" %}
+content="VSCode est disponible dans AUR :
+
+`yay -S visual-studio-code-bin`
+
+Ou utilisez Snap :
+`sudo snap install code --classic`" %}
 
 {% include message.html
 title="Permissions USB sur Linux"
@@ -166,10 +182,12 @@ icon="fas fa-exclamation-triangle" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Vérifier que VSCode fonctionne"
-content="Lancez Visual Studio Code. Vous devriez voir :<br>
-- La fenêtre principale avec la page d'accueil<br>
-- La barre d'activité sur la gauche (Explorateur, Recherche, Extensions...)<br>
-- Un éditeur vide au centre<br><br>
+content="Lancez Visual Studio Code. Vous devriez voir :
+
+- La fenêtre principale avec la page d'accueil
+- La barre d'activité sur la gauche (Explorateur, Recherche, Extensions...)
+- Un éditeur vide au centre
+
 Si vous voyez cette interface, VSCode est correctement installé !" %}
 
 ---
@@ -181,32 +199,37 @@ Maintenant que VSCode est installé, nous allons ajouter l'extension PlatformIO 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Ouvrir le gestionnaire d'extensions"
-content="Dans VSCode, cliquez sur l'icône <strong>Extensions</strong> dans la barre d'activité de gauche (icône de carrés empilés) ou utilisez le raccourci :<br>
-- Windows/Linux : <strong>Ctrl+Shift+X</strong><br>
-- macOS : <strong>Cmd+Shift+X</strong>" %}
+content="Dans VSCode, cliquez sur l'icône **Extensions** dans la barre d'activité de gauche (icône de carrés empilés) ou utilisez le raccourci :
+
+- Windows/Linux : **Ctrl+Shift+X**
+- macOS : **Cmd+Shift+X**" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Rechercher PlatformIO"
-content="Dans la barre de recherche des extensions, tapez <strong>platformio</strong>. Vous devriez voir l'extension <strong>PlatformIO IDE</strong> par PlatformIO." image="platformio-install.png" %}
+content="Dans la barre de recherche des extensions, tapez **platformio**. Vous devriez voir l'extension **PlatformIO IDE** par PlatformIO." image="platformio-install.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Installer l'extension"
-content="Cliquez sur le bouton <strong>Install</strong> (Installer). L'installation prend quelques minutes car PlatformIO télécharge automatiquement :<br>
-- Python (si nécessaire)<br>
-- PlatformIO Core<br>
-- Les outils de compilation<br><br>
-<strong>Soyez patient, ne fermez pas VSCode pendant l'installation !</strong>" %}
+content="Cliquez sur le bouton **Install** (Installer). L'installation prend quelques minutes car PlatformIO télécharge automatiquement :
+
+- Python (si nécessaire)
+- PlatformIO Core
+- Les outils de compilation
+
+**Soyez patient, ne fermez pas VSCode pendant l'installation !**" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 4 : Attendre la fin de l'installation"
-content="Une fois l'installation terminée, vous verrez :<br>
-- Une icône PlatformIO (tête d'alien) dans la barre d'activité de gauche<br>
-- Une notification indiquant que PlatformIO est prêt<br>
-- Possiblement une demande de redémarrage de VSCode<br><br>
-Si on vous le demande, cliquez sur <strong>Reload Now</strong> (Recharger maintenant)." %}
+content="Une fois l'installation terminée, vous verrez :
+
+- Une icône PlatformIO (tête d'alien) dans la barre d'activité de gauche
+- Une notification indiquant que PlatformIO est prêt
+- Possiblement une demande de redémarrage de VSCode
+
+Si on vous le demande, cliquez sur **Reload Now** (Recharger maintenant)." %}
 
 {% include message.html
 title="Première installation longue"
@@ -221,18 +244,20 @@ icon="fas fa-clock" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Ouvrir PlatformIO Home"
-content="Cliquez sur l'icône <strong>PlatformIO</strong> (tête d'alien) dans la barre d'activité de gauche. Un panneau s'ouvre avec plusieurs options. Cliquez sur <strong>PIO Home</strong> puis <strong>Open</strong>." image="platformio-navbar.png" %}
+content="Cliquez sur l'icône **PlatformIO** (tête d'alien) dans la barre d'activité de gauche. Un panneau s'ouvre avec plusieurs options. Cliquez sur **PIO Home** puis **Open**." image="platformio-navbar.png" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Interface PlatformIO Home"
-content="La page d'accueil de PlatformIO s'ouvre avec plusieurs sections :<br>
-- <strong>New Project</strong> : Créer un nouveau projet<br>
-- <strong>Open Project</strong> : Ouvrir un projet existant<br>
-- <strong>Platforms</strong> : Gérer les plateformes supportées<br>
-- <strong>Libraries</strong> : Gérer les bibliothèques<br>
-- <strong>Boards</strong> : Voir les cartes supportées<br><br>
-Si vous voyez cette page, <strong>félicitations</strong> ! PlatformIO est correctement installé." image="platformio-home.png" %}
+content="La page d'accueil de PlatformIO s'ouvre avec plusieurs sections :
+
+- **New Project** : Créer un nouveau projet
+- **Open Project** : Ouvrir un projet existant
+- **Platforms** : Gérer les plateformes supportées
+- **Libraries** : Gérer les bibliothèques
+- **Boards** : Voir les cartes supportées
+
+Si vous voyez cette page, **félicitations** ! PlatformIO est correctement installé." image="platformio-home.png" %}
 
 ---
 
@@ -243,19 +268,29 @@ Sur Linux, vous devez configurer les permissions pour accéder aux ports USB san
 {% include step-tuto.html
 greyBackground = true
 title = "Ajouter l'utilisateur au groupe dialout"
-content="Ouvrez un terminal et exécutez :<br><br>
-<code>sudo usermod -a -G dialout $USER</code><br>
-<code>sudo usermod -a -G plugdev $USER</code><br><br>
-<strong>Déconnectez-vous puis reconnectez-vous</strong> (ou redémarrez l'ordinateur) pour que les changements prennent effet." %}
+content="Ouvrez un terminal et exécutez :
+
+```
+sudo usermod -a -G dialout $USER
+sudo usermod -a -G plugdev $USER
+```
+
+**Déconnectez-vous puis reconnectez-vous** (ou redémarrez l'ordinateur) pour que les changements prennent effet." %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Installer les règles udev (optionnel)"
-content="Pour un meilleur support de certaines cartes (ESP32, STM32...), installez les règles udev de PlatformIO :<br><br>
-<code>curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules</code><br><br>
-Puis rechargez les règles :<br>
-<code>sudo udevadm control --reload-rules</code><br>
-<code>sudo udevadm trigger</code>" %}
+content="Pour un meilleur support de certaines cartes (ESP32, STM32...), installez les règles udev de PlatformIO :
+
+```
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+```
+
+Puis rechargez les règles :
+```
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```" %}
 
 {% include message.html
 title="Redémarrage nécessaire"
@@ -272,25 +307,29 @@ Testons l'installation en créant un projet simple de type "Blink".
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Nouveau projet"
-content="1. Cliquez sur l'icône PlatformIO dans la barre de gauche<br>
-2. Cliquez sur <strong>PIO Home > Open</strong><br>
-3. Cliquez sur <strong>+ New Project</strong>" %}
+content="1. Cliquez sur l'icône PlatformIO dans la barre de gauche
+2. Cliquez sur **PIO Home > Open**
+3. Cliquez sur **+ New Project**" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Configuration du projet"
-content="Remplissez les champs suivants :<br>
-- <strong>Name</strong> : <code>test_blink</code><br>
-- <strong>Board</strong> : Sélectionnez votre carte (par exemple : <code>Arduino Uno</code>, <code>ESP32 Dev Module</code>, <code>NodeMCU 1.0</code>...)<br>
-- <strong>Framework</strong> : Laissez <code>Arduino</code> par défaut<br>
-- <strong>Location</strong> : Laissez le chemin par défaut ou choisissez un dossier<br><br>
-Cliquez sur <strong>Finish</strong>. PlatformIO crée le projet et télécharge les outils nécessaires pour votre carte." %}
+content="Remplissez les champs suivants :
+
+- **Name** : `test_blink`
+- **Board** : Sélectionnez votre carte (par exemple : `Arduino Uno`, `ESP32 Dev Module`, `NodeMCU 1.0`...)
+- **Framework** : Laissez `Arduino` par défaut
+- **Location** : Laissez le chemin par défaut ou choisissez un dossier
+
+Cliquez sur **Finish**. PlatformIO crée le projet et télécharge les outils nécessaires pour votre carte." %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Code de test"
-content="PlatformIO crée automatiquement la structure du projet. Ouvrez le fichier <strong>src/main.cpp</strong>. Remplacez le contenu par ce code de test Blink :<br><br>
-<pre><code>#include &lt;Arduino.h&gt;
+content="PlatformIO crée automatiquement la structure du projet. Ouvrez le fichier **src/main.cpp**. Remplacez le contenu par ce code de test Blink :
+
+```cpp
+#include <Arduino.h>
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -301,15 +340,18 @@ void loop() {
   delay(1000);
   digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
-}</code></pre>" %}
+}
+```" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 4 : Compiler le projet"
-content="Pour compiler le projet :<br>
-1. Cliquez sur l'icône <strong>✓</strong> (coche) dans la barre de statut en bas (Build)<br>
-2. Ou utilisez le raccourci : <strong>Ctrl+Alt+B</strong> (Windows/Linux) / <strong>Cmd+Alt+B</strong> (macOS)<br><br>
-PlatformIO compile le code. Si tout va bien, vous verrez <strong>SUCCESS</strong> dans le terminal." %}
+content="Pour compiler le projet :
+
+1. Cliquez sur l'icône **✓** (coche) dans la barre de statut en bas (Build)
+2. Ou utilisez le raccourci : **Ctrl+Alt+B** (Windows/Linux) / **Cmd+Alt+B** (macOS)
+
+PlatformIO compile le code. Si tout va bien, vous verrez **SUCCESS** dans le terminal." %}
 
 {% include message.html
 title="Première compilation longue"
@@ -320,10 +362,12 @@ icon="fas fa-hourglass-half" %}
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 5 : Upload sur la carte (optionnel)"
-content="Si vous avez une carte connectée, vous pouvez uploader le programme :<br>
-1. Branchez votre carte via USB<br>
-2. Cliquez sur l'icône <strong>→</strong> (flèche) dans la barre de statut (Upload)<br>
-3. Ou utilisez le raccourci : <strong>Ctrl+Alt+U</strong> (Windows/Linux) / <strong>Cmd+Alt+U</strong> (macOS)<br><br>
+content="Si vous avez une carte connectée, vous pouvez uploader le programme :
+
+1. Branchez votre carte via USB
+2. Cliquez sur l'icône **→** (flèche) dans la barre de statut (Upload)
+3. Ou utilisez le raccourci : **Ctrl+Alt+U** (Windows/Linux) / **Cmd+Alt+U** (macOS)
+
 PlatformIO compile et upload automatiquement. La LED de votre carte devrait clignoter !" %}
 
 {% include message.html
@@ -341,32 +385,38 @@ Les bibliothèques se déclarent directement dans le fichier `platformio.ini` vi
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 1 : Trouver l'identifiant de la bibliothèque"
-content="Rendez-vous sur le registre officiel <a href='https://registry.platformio.org/'>registry.platformio.org</a> et recherchez la bibliothèque souhaitée. Notez son identifiant au format <code>auteur/NomLib</code> (ex : <code>waspinator/AccelStepper</code>)." %}
+content="Rendez-vous sur le registre officiel [registry.platformio.org](https://registry.platformio.org/) et recherchez la bibliothèque souhaitée. Notez son identifiant au format `auteur/NomLib` (ex : `waspinator/AccelStepper`)." %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2 : Ajouter lib_deps dans platformio.ini"
-content="Ouvrez le fichier <code>platformio.ini</code> à la racine de votre projet et ajoutez la clé <code>lib_deps</code> :<br><br>
-<pre><code>[env:esp32dev]
+content="Ouvrez le fichier `platformio.ini` à la racine de votre projet et ajoutez la clé `lib_deps` :
+
+```ini
+[env:esp32dev]
 platform = espressif32
 board = esp32dev
 framework = arduino
 monitor_speed = 115200
 lib_deps =
-    waspinator/AccelStepper@^1.64</code></pre><br>
-Pour ajouter plusieurs bibliothèques, listez-les les unes sous les autres :
-<pre><code>lib_deps =
     waspinator/AccelStepper@^1.64
-    bblanchon/ArduinoJson@^7.0.0</code></pre>" %}
+```
+
+Pour ajouter plusieurs bibliothèques, listez-les les unes sous les autres :
+```ini
+lib_deps =
+    waspinator/AccelStepper@^1.64
+    bblanchon/ArduinoJson@^7.0.0
+```" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 3 : Compiler pour installer"
-content="Lancez une compilation avec <strong>Ctrl+Alt+B</strong> (Windows/Linux) ou <strong>Cmd+Alt+B</strong> (macOS). PlatformIO télécharge et installe automatiquement toutes les bibliothèques listées dans <code>lib_deps</code> avant de compiler." %}
+content="Lancez une compilation avec **Ctrl+Alt+B** (Windows/Linux) ou **Cmd+Alt+B** (macOS). PlatformIO télécharge et installe automatiquement toutes les bibliothèques listées dans `lib_deps` avant de compiler." %}
 
 {% include message.html
 title="Format des versions"
-message="Le symbole <strong>^</strong> signifie « version compatible » (ex : <code>^1.64</code> accepte 1.64, 1.65... mais pas 2.0). Utilisez <code>@*</code> pour toujours prendre la dernière version, ou un numéro exact comme <code>@1.64.0</code> pour figer la version."
+message="Le symbole **^** signifie « version compatible » (ex : `^1.64` accepte 1.64, 1.65... mais pas 2.0). Utilisez `@*` pour toujours prendre la dernière version, ou un numéro exact comme `@1.64.0` pour figer la version."
 status="is-info"
 icon="fas fa-tag" %}
 
@@ -379,24 +429,27 @@ Voici quelques réglages utiles pour améliorer votre expérience de développem
 {% include step-tuto.html
 greyBackground = true
 title = "Extensions VSCode utiles"
-content="Installez ces extensions pour améliorer votre productivité :<br>
-- <strong>C/C++</strong> (Microsoft) : IntelliSense pour C/C++<br>
-- <strong>Better C++ Syntax</strong> : Meilleure coloration syntaxique<br>
-- <strong>Bracket Pair Colorizer 2</strong> : Colore les paires de parenthèses<br>" %}
+content="Installez ces extensions pour améliorer votre productivité :
+
+- **C/C++** (Microsoft) : IntelliSense pour C/C++
+- **Better C++ Syntax** : Meilleure coloration syntaxique
+- **Bracket Pair Colorizer 2** : Colore les paires de parenthèses" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Raccourcis clavier PlatformIO"
-content="Mémorisez ces raccourcis essentiels :<br><br>
-<strong>Windows/Linux :</strong><br>
-- <strong>Ctrl+Alt+B</strong> : Build (compiler)<br>
-- <strong>Ctrl+Alt+U</strong> : Upload (téléverser)<br>
-- <strong>Ctrl+Alt+S</strong> : Monitor série<br>
-- <strong>Ctrl+Alt+T</strong> : Run task (tâche spécifique)<br><br>
-<strong>macOS :</strong><br>
-- <strong>Cmd+Alt+B</strong> : Build<br>
-- <strong>Cmd+Alt+U</strong> : Upload<br>
-- <strong>Cmd+Alt+S</strong> : Monitor série" %}
+content="Mémorisez ces raccourcis essentiels :
+
+**Windows/Linux :**
+- **Ctrl+Alt+B** : Build (compiler)
+- **Ctrl+Alt+U** : Upload (téléverser)
+- **Ctrl+Alt+S** : Monitor série
+- **Ctrl+Alt+T** : Run task (tâche spécifique)
+
+**macOS :**
+- **Cmd+Alt+B** : Build
+- **Cmd+Alt+U** : Upload
+- **Cmd+Alt+S** : Monitor série" %}
 
 ---
 
@@ -407,16 +460,17 @@ content="Mémorisez ces raccourcis essentiels :<br><br>
 {% include step-tuto.html
 greyBackground = true
 title = "Solution 1 : Réinstaller PlatformIO"
-content="1. Désinstallez l'extension PlatformIO dans VSCode<br>
-2. Fermez complètement VSCode<br>
-3. Supprimez le dossier <code>~/.platformio</code> (Linux/macOS) ou <code>C:\\Users\\VotreNom\\.platformio</code> (Windows)<br>
+content="1. Désinstallez l'extension PlatformIO dans VSCode
+2. Fermez complètement VSCode
+3. Supprimez le dossier `~/.platformio` (Linux/macOS) ou `C:\\Users\\VotreNom\\.platformio` (Windows)
 4. Rouvrez VSCode et réinstallez PlatformIO" %}
 
 {% include step-tuto.html
 greyBackground = true
 title = "Solution 2 : Problème de Python"
-content="PlatformIO nécessite Python. Vérifiez que Python est bien installé :<br>
-<code>python --version</code> ou <code>python3 --version</code><br><br>
+content="PlatformIO nécessite Python. Vérifiez que Python est bien installé :
+`python --version` ou `python3 --version`
+
 Si Python n'est pas installé, téléchargez-le depuis [python.org](https://www.python.org/) et réinstallez PlatformIO." %}
 
 ### Problème : Port USB non détecté (Linux)
@@ -424,9 +478,12 @@ Si Python n'est pas installé, téléchargez-le depuis [python.org](https://www.
 {% include step-tuto.html
 greyBackground = true
 title = "Vérifier les permissions USB"
-content="Assurez-vous d'avoir suivi les étapes de configuration USB (section précédente) :<br>
-<code>sudo usermod -a -G dialout $USER</code><br>
-<code>sudo usermod -a -G plugdev $USER</code><br><br>
+content="Assurez-vous d'avoir suivi les étapes de configuration USB (section précédente) :
+```
+sudo usermod -a -G dialout $USER
+sudo usermod -a -G plugdev $USER
+```
+
 Puis déconnectez-vous et reconnectez-vous." %}
 
 ### Problème : Erreur de compilation "tool-chain not found"
@@ -434,10 +491,10 @@ Puis déconnectez-vous et reconnectez-vous." %}
 {% include step-tuto.html
 greyBackground = true
 title = "Réinstaller la plateforme"
-content="1. Ouvrez PlatformIO Home<br>
-2. Allez dans <strong>Platforms > Installed</strong><br>
-3. Trouvez votre plateforme (ex: Espressif 32) et cliquez sur <strong>Uninstall</strong><br>
-4. Réinstallez la plateforme depuis <strong>Platforms > Embedded</strong><br>
+content="1. Ouvrez PlatformIO Home
+2. Allez dans **Platforms > Installed**
+3. Trouvez votre plateforme (ex: Espressif 32) et cliquez sur **Uninstall**
+4. Réinstallez la plateforme depuis **Platforms > Embedded**
 5. Essayez de compiler à nouveau" %}
 
 ---
