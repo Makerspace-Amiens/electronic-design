@@ -1,9 +1,9 @@
 ---
 layout: documentation
 hide_hero: false
-hero_image: "/docs/project/stepper-controller-board/hero.jpg"
+hero_image: "hero.png"
 hero_darken: true
-image: "board.png"
+image: "logo.png"
 component_toc: true
 doc_header: true
 type: project
@@ -167,18 +167,20 @@ content="Objectif : Valider le fonctionnement d'un driver A4988 avec un moteur N
 - Tester le code de rotation simple (full step)
 - Mesurer la consommation et la température du driver
 
-**Livrables :** Photo du montage + vidéo du moteur en fonctionnement" %}
+**Livrables :** Photo du montage dans votre projet machine that draw" %}
 
 {% include step-tuto.html
 greyBackground = true
-title = "Étape 1.3 : Test de l'écran OLED"
+title = "Étape 1.2 : Test de l'écran OLED"
 content="Objectif : Afficher du texte et des graphiques sur l'OLED.
 
 **Tâches :**
 
 - Connecter l'écran OLED en I2C (voir [tutoriel SSD1306](/electronic-design/docs/tutorial/esp32-ssd1306-oled))
 - Afficher : nom du fichier, état, progression
-- Créer un menu simple avec 2-3 options (Start, Stop)" %}
+- Créer un menu simple avec 2-3 options (Start, Stop)
+
+**Livrables :** Documentation du prototypage (photos + code + résultats des tests) dans votre projet machine that draw" %}
 
 ### Conception du schéma électronique (KiCad)
 
@@ -192,7 +194,7 @@ content="Objectif : Définir l'architecture globale avant de dessiner le schéma
 - Dessiner un schéma bloc sur papier : ESP32 au centre, blocs I2C/SPI/GPIO autour
 - Lister tous les signaux (STEP, DIR, EN, SDA, SCL, MISO, MOSI, SCK, CS)
 - Définir les alimentations (3.3V, 12V/24V, GND communs)
-- Identifier les découplages critiques (VDD, VMOT)" %}
+- Identifier les découplages critiques (VDD, VMOT) " %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -206,7 +208,9 @@ content="Objectif : Dessiner le schéma complet dans KiCad Eeschema.
 - Connecter les alimentations (rails 3.3V et VMOT)
 - Ajouter les condensateurs de découplage (100nF + 10µF)
 - Ajouter les résistances de pull-up (I2C, SPI)
-- Annoter tous les composants (désignateurs R1, C1, etc.)" %}
+- Annoter tous les composants (désignateurs R1, C1, etc.)
+
+**Livrables :** Fichier KiCad schématique (.kicad_sch) + PDF du schéma dans votre projet machine that draw" %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -217,8 +221,7 @@ content="Objectif : Détecter les erreurs avant le routage.
 
 - Lancer l'ERC (Electrical Rules Check) dans KiCad
 - Corriger toutes les erreurs (connexions manquantes, conflits)
-- Faire relire le schéma par un autre binôme
-- Valider avec l'enseignant" %}
+- Faire relire le schéma par un autre binôme " %}
 
 ### Routage du PCB et fabrication
 
@@ -231,7 +234,7 @@ content="Objectif : Associer chaque composant à son empreinte physique.
 
 - Ouvrir l'éditeur d'empreintes dans KiCad
 - Assigner les footprints : ESP32, résistances/condensateurs 1206, borniers à vis
-- Vérifier les dimensions des empreintes (comparer avec les datasheets)" %}
+- Vérifier les dimensions des empreintes (comparer avec les datasheets) " %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -245,7 +248,9 @@ content="Objectif : Router le PCB en respectant les contraintes.
 - Router les signaux critiques (SPI, I2C) avec pistes courtes
 - Placer les découplages au plus près des ICs
 - Ajouter un plan de masse (GND) sur la couche inférieure
-- Lancer le DRC (Design Rules Check) et corriger les erreurs " %}
+- Lancer le DRC (Design Rules Check) et corriger les erreurs
+
+**Livrables :** Fichier KiCad PCB (.kicad_pcb) dans votre projet machine that draw" %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -255,7 +260,9 @@ content="Objectif : Générer les fichiers de fabrication et commander les PCB.
 **Tâches :**
 
 - Générer les fichiers Gerber + fichier de perçage (voir [tutoriel fabrication PCB](/electronic-design/docs/tutorial/kicad-fabrication-pcb))
-- Vérifier les fichiers avec un visualiseur Gerber (GerbView ou en ligne)" %}
+- Vérifier les fichiers avec un visualiseur Gerber (GerbView ou en ligne)
+
+**Livrables :** Archive des fichiers Gerber (.zip) dans votre projet machine that draw" %}
 
 ### Assemblage, tests et validation
 
@@ -266,10 +273,12 @@ content="Objectif : Assembler la carte PCB.
 
 **Tâches :**
 
-- Souder les composants CMS en premier (résistances, condensateurs 1206, condensateurs électrolytiques)
-- Souder les composants traversants (, borniers, pin headers)
+- Souder les composants CMS en premier (résistances, condensateurs 1206)
+- Souder les composants traversants (condensateurs électrolytiques, borniers, pin headers)
 - Souder les connecteurs de modules (ESP32, A4988, OLED, socket SD)
-- Inspecter visuellement toutes les soudures (pas de court-circuit, pas de soudure froide)" %}
+- Inspecter visuellement toutes les soudures (pas de court-circuit, pas de soudure froide)
+
+**Livrables :** Photos du PCB assemblé (recto + verso)" %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -282,7 +291,9 @@ content="Objectif : Vérifier l'absence de court-circuit avant la mise sous tens
 - Vérifier la polarité des condensateurs électrolytiques
 - Alimenter en 3.3V uniquement (via ESP32 USB) : pas de surchauffe
 - Mesurer 3.3V sur les rails VDD
-- Alimenter VMOT (12V) avec une alimentation à courant limité (< 500mA)" %}
+- Alimenter VMOT (12V) avec une alimentation à courant limité (< 500mA)
+
+**Livrables :** Rapport de tests (mesures électriques + photos)" %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -295,9 +306,26 @@ content="Objectif : Valider le fonctionnement complet de la carte.
 - Vérifier l'affichage OLED (adresse I2C détectée : 0x3C)
 - Vérifier la détection de la carte SD
 - Tester la rotation d'un moteur avec le driver A4988
-- Tester les 2 moteurs simultanément" %}
+- Tester les 2 moteurs simultanément
+
+**Livrables :** PCB fonctionnel + vidéo de démonstration + documentation technique complète (README, schémas, BOM, code source)" %}
 
 ---
+
+## Planning prévisionnel
+
+Le projet se déroule sur **8 séances de 3 heures** (24h au total) réparties sur plusieurs semaines.
+
+| Séance | Durée | Contenu | Description |
+| -------- | ------- | --------- | -------- |
+| **1** | 3h | **Prototypage** | - |
+| **2** | 3h | **Conception schématique** | - |
+| **3** | 3h | **Routage PCB (1/2)** | Routage des éléments importants : drivers moteurs et régulation |
+| **4** | 3h | **Routage PCB (2/2)** | Routage des éléments secondaires : écran et carte SD |
+| **5** | 3h | **Assemblage** | - |
+| **6** | 3h | **Développement logiciel** | - |
+| **7** | 3h | **Correctifs finaux** | - |
+| **8** | 3h | **Validation finale et documentation** | - |
 
 ## Ressources techniques
 
