@@ -120,6 +120,7 @@ La carte doit permettre de :
 | **Interface I2C** | SDA=GPIO21, SCL=GPIO22 | Écran OLED |
 | **Interface SPI** | VSPI (GPIO 18/19/23/5) | Carte SD |
 | **GPIOs fins de course** | GPIO 34, 35, 36, 39 | Limit switches (input only) |
+| **Microcontrôleur** | ESP32-S3 | Board : esp32-s3-devkitc-1 |
 | **Dimensions PCB** | Format shield arduino uno | Pour faciliter l'intégration avec l'ESP32 format Arduino UNO |
 | **Connecteurs** | Screw terminals | Bouton arrêt urgence |
 | **Connecteurs** | Barrel Jack | Alimentation |
@@ -133,7 +134,7 @@ La carte doit permettre de :
 
 | Désignation | Référence | Quantité | Remarques |
 | ------------- | ----------- | ---------- | ----------- |
-| ESP32 | ESP32 format arduino uno | 1 | - |
+| ESP32 | ESP32-S3-DevKitC-1 (format arduino uno) | 1 | - |
 | Driver A4988 (module) | StepStick compatible | 2 | - |
 | Écran OLED 0.96" I2C | SSD1306 128×64 | 1 | - |
 | Socket SD push-push | - | 1 | - |
@@ -318,6 +319,7 @@ content="Objectif : Valider le fonctionnement complet de la carte.
 
 **Tâches :**
 
+- Créer un projet PlatformIO avec la configuration ESP32-S3-DevKitC-1 (voir section Configuration PlatformIO)
 - Uploader le firmware de test (blink, scan I2C, test SD)
 - Vérifier l'affichage OLED (adresse I2C détectée : 0x3C)
 - Vérifier la détection de la carte SD
@@ -326,6 +328,26 @@ content="Objectif : Valider le fonctionnement complet de la carte.
 - Tester les 4 limit switches (lecture GPIO, détection appui)
 
 **Livrables :** PCB fonctionnel + vidéo de démonstration + documentation technique complète (README, schémas, BOM, code source)" %}
+
+---
+
+## Configuration PlatformIO
+
+Pour programmer l'ESP32-S3-DevKitC-1 (format Arduino UNO), utilisez la configuration suivante dans votre fichier `platformio.ini` :
+
+```ini
+[env:esp32-s3-devkitc-1]
+platform = espressif32
+board = esp32-s3-devkitc-1
+framework = arduino
+monitor_speed = 115200
+```
+
+{% include message.html
+title="Configuration ESP32-S3"
+message="L'ESP32 format Arduino UNO est basé sur la variante **ESP32-S3-DevKitC-1**. Il est important d'utiliser cette configuration spécifique dans PlatformIO, sinon l'upload et le fonctionnement ne seront pas garantis."
+status="is-warning"
+icon="fas fa-exclamation-triangle" %}
 
 ---
 
