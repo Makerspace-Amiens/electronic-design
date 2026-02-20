@@ -63,6 +63,7 @@ La carte intégrera :
 - **Lecteur de carte SD** pour stocker les fichiers G-code ou dessins
 - **Écran OLED** pour afficher l'état, les menus et la progression
 - **Connecteurs** pour moteurs, alimentation et extension
+- Gestion des **alimentations**
 
 ### Objectifs pédagogiques
 
@@ -77,8 +78,8 @@ La carte intégrera :
 - Documenter un projet technique de A à Z
 
 {% include message.html
-title="Projet en binôme/trinôme"
-message="Ce projet se réalise en équipe de 2 à 3 étudiants. Organisez-vous pour répartir les tâches : conception schématique, routage PCB, firmware, tests et documentation. La collaboration est essentielle à la réussite du projet."
+title="Projet en groupe"
+message="Ce projet se réalise avec les mêmes équipes que le projet Machine that draws. Organisez-vous pour répartir les tâches : conception schématique, routage PCB, firmware, tests et documentation. La collaboration est essentielle à la réussite du projet."
 status="is-info"
 icon="fas fa-users" %}
 
@@ -103,17 +104,26 @@ La carte doit permettre de :
    - Progression (pourcentage, ligne en cours)
    - Menus de navigation (optionnel)
 
+4. **Détecter les fins de course** via limit switches
+   - 4 capteurs mécaniques (X min, X max, Y min, Y max)
+   - Référencement automatique des axes (homing)
+   - Protection contre les déplacements hors limites
+
 ### Spécifications techniques
 
 | Paramètre | Valeur | Remarques |
 | ----------- | -------- | ----------- |
-| **Alimentation** | 12V ou 24V DC | Alimentation externe pour moteurs |
-| **Logique** | 3.3V | Fournie par le régulateur R-78E5.0-1.0 |
+| **Alimentation moteurs** | 12V ou 24V DC | Alimentation externe pour moteurs |
+| **Alimentation servomoteur et ESP32** | 5V | Fournie par le régulateur R-78E5.0-1.0 |
+| **Logique** | 3.3V | Fournie par le régulateur de la carte ESP32 |
 | **Courant moteurs** | 0.5A à 1.5A par phase | Réglable via Vref |
 | **Interface I2C** | SDA=GPIO21, SCL=GPIO22 | Écran OLED |
 | **Interface SPI** | VSPI (GPIO 18/19/23/5) | Carte SD |
-| **Dimensions PCB** | ≤ 100×100 mm | Pour minimiser les coûts de fabrication |
-| **Connecteurs** | Screw terminals | Alimentation |
+| **GPIOs fins de course** | GPIO 34, 35, 36, 39 | Limit switches (input only) |
+| **Dimensions PCB** | Format shield arduino uno | Pour faciliter l'intégration avec l'ESP32 format Arduino UNO |
+| **Connecteurs** | Screw terminals | Bouton arrêt urgence |
+| **Connecteurs** | Barrel Jack | Alimentation |
+| **LEDs** | SMD 1206 | Témoins d'alimentation |
 
 ---
 
@@ -121,14 +131,15 @@ La carte doit permettre de :
 
 ### Composants principaux
 
-| Désignation | Référence | Quantité |
-| ------------- | ----------- | ---------- |
-| ESP32 | ESP32 format arduino uno | 1 |
-| Driver A4988 (module) | StepStick compatible | 2 |
-| Écran OLED 0.96" I2C | SSD1306 128×64 | 1 |
-| Socket SD push-push | - | 1 |
-| Moteur NEMA 17 | - | 2 |
-| Régulateur | R-78E5.0-1.0 | 1 |
+| Désignation | Référence | Quantité | Remarques |
+| ------------- | ----------- | ---------- | ----------- |
+| ESP32 | ESP32 format arduino uno | 1 | - |
+| Driver A4988 (module) | StepStick compatible | 2 | - |
+| Écran OLED 0.96" I2C | SSD1306 128×64 | 1 | - |
+| Socket SD push-push | - | 1 | - |
+| Moteur NEMA 17 | - | 2 | - |
+| Régulateur 5V | R-78E5.0-1.0 | 1 | - |
+| Limit switches (fins de course) | Microswitch mécanique | 4 | X min, X max, Y min, Y max |
 
 ### Composants passifs
 
@@ -143,7 +154,9 @@ La carte doit permettre de :
 
 | Désignation | Type | Quantité | Remarques |
 |-------------|------|----------|-----------|
-| Connecteur alimentation | Bornier à vis 2 pôles (5mm) | 1 | VMOT (12-24V) + GND |
+| Connecteur alimentation | Barrel Jack | 1 | VMOT (12-24V) + GND |
+| Bouton arrêt urgence | Bornier à vis 2 pôles (5mm) | 1 | - |
+| Connecteur limit switches | Pin header femelle (2.54mm) 3 pôles | 4 | Signal, GND, 3.3V |
 | Pin headers mâle | Header (2.54mm) | 2 | 1A, 1B, 2A, 2B |
 | Pin headers mâle | Header (2.54mm) | - | Connexion ESP32 |
 
@@ -192,8 +205,8 @@ content="Objectif : Définir l'architecture globale avant de dessiner le schéma
 **Tâches :**
 
 - Dessiner un schéma bloc sur papier : ESP32 au centre, blocs I2C/SPI/GPIO autour
-- Lister tous les signaux (STEP, DIR, EN, SDA, SCL, MISO, MOSI, SCK, CS)
-- Définir les alimentations (3.3V, 12V/24V, GND communs)
+- Lister tous les signaux (STEP, DIR, EN, SDA, SCL, MISO, MOSI, SCK, CS, LIMIT_X_MIN, LIMIT_X_MAX, LIMIT_Y_MIN, LIMIT_Y_MAX)
+- Définir les alimentations (3.3V, 5V, 12V/24V, GND communs)
 - Identifier les découplages critiques (VDD, VMOT) " %}
 
 {% include step-tuto.html
@@ -205,9 +218,11 @@ content="Objectif : Dessiner le schéma complet dans KiCad Eeschema.
 
 - Créer un nouveau projet KiCad
 - Placer les symboles : ESP32, A4988 (×2), SSD1306, socket SD
-- Connecter les alimentations (rails 3.3V et VMOT)
+- Ajouter l'alimentation 5V
+- Connecter les alimentations (rails 3.3V, rails 5V et VMOT)
 - Ajouter les condensateurs de découplage (100nF + 10µF)
 - Ajouter les résistances de pull-up (I2C, SPI)
+- Ajouter les connecteurs pour les 4 limit switches
 - Annoter tous les composants (désignateurs R1, C1, etc.)
 
 **Livrables :** Fichier KiCad schématique (.kicad_sch) + PDF du schéma dans votre projet machine that draw" %}
@@ -244,8 +259,10 @@ content="Objectif : Router le PCB en respectant les contraintes.
 **Tâches :**
 
 - Placer les composants : ESP32 au centre, drivers A4988 proches des connecteurs moteurs, SD et OLED en périphérie
+- Placer les connecteurs limit switches sur un côté du PCB
 - Router les pistes de puissance (VMOT, GND) en premier (largeur ≥ 1.5mm)
 - Router les signaux critiques (SPI, I2C) avec pistes courtes
+- Router les signaux limit switches vers les GPIOs
 - Placer les découplages au plus près des ICs
 - Ajouter un plan de masse (GND) sur la couche inférieure
 - Lancer le DRC (Design Rules Check) et corriger les erreurs
@@ -261,6 +278,7 @@ content="Objectif : Générer les fichiers de fabrication et commander les PCB.
 
 - Générer les fichiers Gerber + fichier de perçage (voir [tutoriel fabrication PCB](/electronic-design/docs/tutorial/kicad-fabrication-pcb))
 - Vérifier les fichiers avec un visualiseur Gerber (GerbView ou en ligne)
+- Uploader l'ensemble des fichiers Kicad dans votre projet Machine that draws
 
 **Livrables :** Archive des fichiers Gerber (.zip) dans votre projet machine that draw" %}
 
@@ -287,10 +305,8 @@ content="Objectif : Vérifier l'absence de court-circuit avant la mise sous tens
 
 **Tâches :**
 
-- Vérifier au multimètre : continuité GND, isolation 3.3V↔GND, isolation VMOT↔GND
+- Vérifier au multimètre : continuité GND, isolation 3.3V↔GND, isolation 5V↔GND, isolation VMOT↔GND
 - Vérifier la polarité des condensateurs électrolytiques
-- Alimenter en 3.3V uniquement (via ESP32 USB) : pas de surchauffe
-- Mesurer 3.3V sur les rails VDD
 - Alimenter VMOT (12V) avec une alimentation à courant limité (< 500mA)
 
 **Livrables :** Rapport de tests (mesures électriques + photos)" %}
@@ -307,6 +323,7 @@ content="Objectif : Valider le fonctionnement complet de la carte.
 - Vérifier la détection de la carte SD
 - Tester la rotation d'un moteur avec le driver A4988
 - Tester les 2 moteurs simultanément
+- Tester les 4 limit switches (lecture GPIO, détection appui)
 
 **Livrables :** PCB fonctionnel + vidéo de démonstration + documentation technique complète (README, schémas, BOM, code source)" %}
 
