@@ -522,6 +522,21 @@ C'est indispensable avant d'envoyer les fichiers en fabrication." %}
 
 {% include step-tuto.html
 greyBackground = true
+title = "Importer une configuration DRC depuis un autre projet"
+content="Vous pouvez importer des règles de conception pré-configurées depuis un autre projet ou un fabricant de PCB :
+
+1. Ouvrez la fenêtre DRC : **Fichier > Configuration de carte**
+2. Cliquez sur **Règles de conception > Contraintes** 
+3. Dans l'onglet **Contraintes de conception**, cliquez sur **Importer les paramètres depuis un autre projet**
+4. Sélectionnez le fichier `.kicad_pro` ou `.kicad_dru` du projet source
+5. Les règles sont importées : validez avec **OK**
+
+**Configuration DRC recommandée** : Utilisez la configuration DRC de votre fabricant pour garantir la compatibilité. Par exemple, **Aisler** fournit des fichiers de configuration DRC prêts à l'emploi sur leur dépôt GitHub : [https://github.com/AislerHQ/aisler-support/tree/master/kicad](https://github.com/AislerHQ/aisler-support/tree/master/kicad)
+
+Importer ces règles vous assure que votre PCB respectera les capacités de fabrication (espacements minimaux, largeurs de pistes, taille de vias, etc.)." %}
+
+{% include step-tuto.html
+greyBackground = true
 title = "Étape 1 : Lancer le DRC"
 content="Allez dans **Inspecter > Vérificateur de règles de conception** ou cliquez sur l'icône coccinelle. La fenêtre DRC s'ouvre avec plusieurs onglets."
 image="lancer-drc.png" %}
