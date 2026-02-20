@@ -147,14 +147,14 @@ La carte doit permettre de :
 | Désignation | Valeur | Package | Quantité | Remarques |
 | ------------- | -------- | --------- | ---------- | ----------- |
 | Condensateur céramique | 100nF | 1206 SMD | 10 | Découplage |
-| Condensateur électrolytique | 100µF 35V | Radial  | 2 | Alimentation moteurs |
+| Condensateur électrolytique | 100µF 35V | Radial | 2 | Alimentation moteurs |
 | Condensateur céramique | 10µF | 1206 SMD | - | Découplage VDD |
 | Résistance pull-up | 10kΩ | 1206 SMD | - | I2C (SDA, SCL), SD (CS, MISO) |
 
 ### Connecteurs
 
 | Désignation | Type | Quantité | Remarques |
-|-------------|------|----------|-----------|
+| ------------- | ------ | ---------- | ----------- |
 | Connecteur alimentation | Barrel Jack | 1 | VMOT (12-24V) + GND |
 | Bouton arrêt urgence | Bornier à vis 2 pôles (5mm) | 1 | - |
 | Connecteur limit switches | Pin header femelle (2.54mm) 3 pôles | 4 | Signal, GND, 3.3V |
