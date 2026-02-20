@@ -36,6 +36,7 @@ todo: 100
 ## Introduction
 
 Une fois votre PCB conçu et vérifié dans Pcbnew, la prochaine étape est de le faire fabriquer. Ce tutoriel vous guide à travers :
+
 - L'export des fichiers Gerber (format standard de fabrication)
 - La compréhension des paramètres de fabrication
 - L'utilisation du service Aisler pour commander vos PCB
@@ -144,6 +145,7 @@ content="**Standard : 1.6mm** (le plus courant et économique)
 **Autres : 0.8mm, 1.0mm, 2.0mm**
 
 **Choix selon usage :**
+
 - **1.6mm** : Usage général, bon compromis rigidité/coût
 - **1.0mm** : Cartes plus compactes, électronique portable
 - **2.0mm** : Applications mécaniques, fortes contraintes
@@ -193,22 +195,24 @@ title = "Finition de surface"
 content="La finition protège le cuivre des pastilles et facilite la soudure :
 
 **HASL (Hot Air Solder Leveling)** :
+
 - Étamage à l'air chaud, le moins cher
 - Surface légèrement irrégulière
 - Bon pour soudure manuelle, limite pour CMS fins
 
 **HASL Lead-Free (Sans plomb)** :
+
 - Comme HASL mais RoHS compliant
 - Recommandé pour produits commerciaux
 
 **ENIG (Electroless Nickel Immersion Gold)** :
+
 - Surface plane et dorée
 - Excellent pour CMS fins, contacts, RF
 - Plus cher mais meilleure qualité
 - Longue durée de conservation
 
 Pour débuter : **HASL Lead-Free** (bon compromis)" %}
-
 
 {% include message.html
 title="Configuration standard recommandée"
@@ -347,7 +351,6 @@ status="is-success"
 icon="fas fa-rocket" %}
 
 ---
-
 
 ## Autres fabricants de PCB populaires
 
@@ -507,6 +510,7 @@ icon="fas fa-graduation-cap" %}
 ### Assemblage CMS (SMT Assembly)
 
 Une fois vos PCB reçus, vous pouvez :
+
 - **Souder manuellement** : Fer à souder + flux pour CMS (composants 0805 et plus)
 - **Hot air rework station** : Pistolet à air chaud pour CMS fins
 - **Réflow au four** : Pâte à braser + pochoir + four de refusion (précis, pour composants fins)
@@ -515,6 +519,7 @@ Une fois vos PCB reçus, vous pouvez :
 ### PCB avancés
 
 Explorez des fonctionnalités avancées :
+
 - **PCB multi-couches** : 4, 6, 8 couches pour circuits complexes
 - **PCB flex/rigide-flex** : Circuits souples pour électronique portable
 - **Contrôle d'impédance** : Pour signaux haute fréquence (RF, USB 3.0, HDMI)
@@ -524,6 +529,7 @@ Explorez des fonctionnalités avancées :
 ### Certifications et normes
 
 Pour produits commerciaux, considérez :
+
 - **RoHS** : Sans substances dangereuses (plomb, etc.)
 - **UL** : Certification sécurité (ignifugation, etc.)
 - **IPC Class 2/3** : Qualité fabrication (Class 3 = aéronautique, médical)
