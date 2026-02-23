@@ -176,6 +176,7 @@ title = "Étape 2 : Tracer des connexions"
 content="Cliquez sur l'extrémité d'une broche d'un composant pour commencer le fil. Le fil suit votre curseur. Cliquez à nouveau pour créer un point d'ancrage ou terminer sur une autre broche. Le fil devient vert quand il est correctement connecté à une broche.
 
 **Astuces :**
+
 - Double-clic pour terminer le fil sans connexion
 - Les fils se connectent automatiquement aux broches quand vous êtes dessus
 - Appuyez sur **Échap** pour annuler"
@@ -450,6 +451,7 @@ icon="fas fa-graduation-cap" %}
 Voici la liste complète des raccourcis les plus utiles dans Eeschema :
 
 ### Placement et édition
+
 - **A** : Ajouter un symbole
 - **P** : Ajouter une broche de connexion (Power)
 - **W** : Tracer un fil
@@ -461,6 +463,7 @@ Voici la liste complète des raccourcis les plus utiles dans Eeschema :
 - **T** : Placer du texte
 
 ### Manipulation
+
 - **M** : Déplacer un élément
 - **G** : Glisser (drag) un élément en gardant les fils attachés
 - **C** : Copier un élément
@@ -472,6 +475,7 @@ Voici la liste complète des raccourcis les plus utiles dans Eeschema :
 - **Ctrl+D** : Dupliquer un élément
 
 ### Navigation et affichage
+
 - **Molette** : Zoom avant/arrière
 - **Ctrl+Molette** : Défilement vertical
 - **Shift+Molette** : Défilement horizontal
@@ -480,6 +484,7 @@ Voici la liste complète des raccourcis les plus utiles dans Eeschema :
 - **Home** : Recentrer le curseur
 
 ### Général
+
 - **Ctrl+S** : Sauvegarder
 - **Ctrl+Z** : Annuler
 - **Ctrl+Y** : Rétablir
