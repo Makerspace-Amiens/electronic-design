@@ -157,7 +157,7 @@ La carte doit permettre de :
 | ------------- | ------ | ---------- | ----------- |
 | Connecteur alimentation | Barrel Jack | 1 | VMOT (12-24V) + GND |
 | Bouton arrêt urgence | Bornier à vis 2 pôles (5mm) | 1 | - |
-| Connecteur limit switches | Pin header femelle (2.54mm) 3 pôles | 4 | Signal, GND, 3.3V |
+| Connecteur limit switches | Pin header femelle (2.54mm) 3 pôles | 2 | Signal, GND, 3.3V |
 | Pin headers mâle | Header (2.54mm) | 2 | 1A, 1B, 2A, 2B |
 | Pin headers mâle | Header (2.54mm) | - | Connexion ESP32 |
 
@@ -229,7 +229,7 @@ content="Objectif : Dessiner le schéma complet dans KiCad Eeschema.
 - Connecter les alimentations (rails 3.3V, rails 5V et VMOT)
 - Ajouter les condensateurs de découplage (100nF + 10µF)
 - Ajouter les résistances de pull-up (I2C, SPI)
-- Ajouter les connecteurs pour les 4 limit switches
+- Ajouter les connecteurs pour les 2 limit switches
 - Annoter tous les composants (désignateurs R1, C1, etc.)
 
 **Livrables :** Fichier KiCad schématique (.kicad_sch) + PDF du schéma dans votre projet machine that draw" %}
