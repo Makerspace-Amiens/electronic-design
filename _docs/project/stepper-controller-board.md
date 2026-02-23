@@ -93,13 +93,13 @@ La carte doit permettre de :
 
 1. **Piloter 2 moteurs pas-à-pas** (axes X et Y) via drivers A4988
 
-2. **Stocker des fichiers** sur carte SD
+2. **Stocker des fichiers** sur carte SD (optionnel)
    - Log des actions effectuées lors du fonctionnement de la solution
    - Format FAT32
    - Détection d'insertion de carte (optionnel)
    - Lancement de fichier G-code (optionnel)
 
-3. **Afficher des informations** sur écran OLED
+3. **Afficher des informations** sur écran OLED (optionnel)
    - État de la machine (idle, running, error)
    - Progression (pourcentage, ligne en cours)
    - Menus de navigation (optionnel)
@@ -140,7 +140,7 @@ La carte doit permettre de :
 | Socket SD push-push | - | 1 | - |
 | Moteur NEMA 17 | - | 2 | - |
 | Régulateur 5V | R-78E5.0-1.0 | 1 | - |
-| Limit switches (fins de course) | Microswitch mécanique | 4 | X min, X max, Y min, Y max |
+| Limit switches (fins de course) | Microswitch mécanique | 2 | X min, X max, Y min, Y max |
 
 ### Composants passifs
 
@@ -185,7 +185,7 @@ content="Objectif : Valider le fonctionnement d'un driver A4988 avec un moteur N
 
 {% include step-tuto.html
 greyBackground = true
-title = "Étape 1.2 : Test de l'écran OLED"
+title = "Étape 1.2 : Test de l'écran OLED (optionnel)"
 content="Objectif : Afficher du texte et des graphiques sur l'OLED.
 
 **Tâches :**
@@ -331,7 +331,7 @@ content="Objectif : Valider le fonctionnement complet de la carte.
 - Vérifier la détection de la carte SD
 - Tester la rotation d'un moteur avec le driver A4988
 - Tester les 2 moteurs simultanément
-- Tester les 4 limit switches (lecture GPIO, détection appui)
+- Tester les 2 limit switches (lecture GPIO, détection appui)
 
 **Livrables :** PCB fonctionnel + vidéo de démonstration + documentation technique complète (README, schémas, BOM, code source)" %}
 
