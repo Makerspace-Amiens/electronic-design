@@ -36,7 +36,7 @@ softwares:
     link: "/docs/tutorial/installation-vscode-platformio"
 
 hardwares:
-  - label: ESP32
+  - label: ESP32 S3 UNO
     link: ""
   - label: Drivers A4988 (×2 minimum)
     link: ""
@@ -118,9 +118,9 @@ La carte doit permettre de :
 | **Logique** | 3.3V | Fournie par le régulateur de la carte ESP32 |
 | **Courant moteurs** | 0.5A à 1.5A par phase | Réglable via Vref |
 | **Interface I2C** | SDA=GPIO21, SCL=GPIO22 | Écran OLED |
-| **Interface SPI** | VSPI (GPIO 18/19/23/5) | Carte SD |
+| **Interface SPI** | SPI2 (GPIO 18/19/23/5) | Carte SD |
 | **GPIOs fins de course** | GPIO 34, 35, 36, 39 | Limit switches (input only) |
-| **Microcontrôleur** | ESP32-S3 | Board : esp32-s3-devkitc-1 |
+| **Microcontrôleur** | ESP32 S3 UNO | Board : esp32-s3-devkitc-1 |
 | **Dimensions PCB** | Format shield arduino uno | Pour faciliter l'intégration avec l'ESP32 format Arduino UNO |
 | **Connecteurs** | Screw terminals | Bouton arrêt urgence |
 | **Connecteurs** | Barrel Jack | Alimentation |
@@ -134,7 +134,7 @@ La carte doit permettre de :
 
 | Désignation | Référence | Quantité | Remarques |
 | ------------- | ----------- | ---------- | ----------- |
-| ESP32 | ESP32-S3-DevKitC-1 (format arduino uno) | 1 | - |
+| ESP32 S3 UNO | ESP32 S3 UNO | 1 | - |
 | Driver A4988 (module) | StepStick compatible | 2 | - |
 | Écran OLED 0.96" I2C | SSD1306 128×64 | 1 | - |
 | Socket SD push-push | - | 1 | - |
@@ -339,7 +339,7 @@ content="Objectif : Valider le fonctionnement complet de la carte.
 
 ## Configuration PlatformIO
 
-Pour programmer l'ESP32-S3-DevKitC-1 (format Arduino UNO), utilisez la configuration suivante dans votre fichier `platformio.ini` :
+Pour programmer l'**ESP32 S3 UNO**, utilisez la configuration suivante dans votre fichier `platformio.ini` :
 
 ```ini
 [env:esp32-s3-devkitc-1]
@@ -351,7 +351,7 @@ monitor_speed = 115200
 
 {% include message.html
 title="Configuration ESP32-S3"
-message="L'ESP32 format Arduino UNO est basé sur la variante **ESP32-S3-DevKitC-1**. Il est important d'utiliser cette configuration spécifique dans PlatformIO, sinon l'upload et le fonctionnement ne seront pas garantis."
+message="L'**ESP32 S3 UNO** est basé sur la variante ESP32-S3 au format Arduino UNO. Il est important d'utiliser cette configuration spécifique dans PlatformIO, sinon l'upload et le fonctionnement ne seront pas garantis."
 status="is-warning"
 icon="fas fa-exclamation-triangle" %}
 

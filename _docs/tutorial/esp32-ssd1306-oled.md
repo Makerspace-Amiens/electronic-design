@@ -35,7 +35,7 @@ softwares:
     link: "https://www.kicad.org/"
 
 hardwares:
-  - label: ESP32 DevKit V1
+  - label: ESP32 S3 UNO
     link: ""
   - label: Écran OLED SSD1306 (0.96" ou 1.3", 128x64)
     link: ""
@@ -77,16 +77,16 @@ Le SSD1306 communique via le protocole **I2C** (Inter-Integrated Circuit), un bu
 
 L'I2C permet de connecter plusieurs périphériques sur le même bus grâce à un système d'adresses uniques.
 
-### Broches I2C par défaut (ESP32)
+### Broches I2C par défaut (ESP32-S3)
 
-| Fonction | GPIO ESP32 |
+| Fonction | GPIO ESP32-S3 |
 | ---------- | ----------- |
 | SDA | GPIO 21 |
 | SCL | GPIO 22 |
 
 {% include message.html
 title="Broches I2C personnalisables"
-message="Le bus I2C de l'ESP32 peut être assigné à n'importe quelles broches via `Wire.begin(SDA, SCL)`. Les broches GPIO 21 et 22 sont les valeurs par défaut et les plus couramment utilisées."
+message="Sur ESP32-S3, le bus I2C peut être assigné à n'importe quelles broches via `Wire.begin(SDA, SCL)`. Les broches GPIO 21 et 22 sont celles utilisées dans ce tutoriel et correspondent au câblage de la carte ESP32 S3 UNO."
 status="is-info"
 icon="fas fa-microchip" %}
 

@@ -33,7 +33,7 @@ softwares:
     link: "/docs/tutorial/installation-kicad"
 
 hardwares:
-  - label: ESP32 DevKit V1
+  - label: ESP32 S3 UNO
     link: ""
   - label: Module driver A4988
     link: ""
@@ -118,7 +118,7 @@ title = "Matériel nécessaire"
 content="
 
 - 1x Module A4988 (format StepStick / Pololu)
-- 1x ESP32 DevKit V1
+- 1x ESP32 S3 UNO
 - 1x Moteur pas-à-pas bipolaire NEMA 17 (≤ 1A/phase recommandé)
 - 1x Alimentation externe 12V ou 24V (2A minimum)
 - 1x Breadboard

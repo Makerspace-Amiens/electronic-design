@@ -35,7 +35,7 @@ softwares:
     link: "https://www.kicad.org/"
 
 hardwares:
-  - label: ESP32 DevKit V1
+  - label: ESP32 S3 UNO
     link: ""
   - label: Socket SD (push-push)
     link: ""
@@ -75,11 +75,11 @@ La carte SD communique via le protocole **SPI** (Serial Peripheral Interface), u
 | **MISO** (Master In Slave Out) | Données envoyées par la carte vers l'ESP32 |
 | **CS** (Chip Select) | Sélection de l'esclave (actif à l'état bas) |
 
-L'ESP32 dispose de deux bus SPI utilisables : **VSPI** (par défaut) et **HSPI**.
+L'ESP32-S3 dispose de deux bus SPI utilisables : **SPI2** (par défaut) et **SPI3**.
 
-### Broches SPI par défaut (VSPI)
+### Broches SPI par défaut (SPI2)
 
-| Fonction | GPIO ESP32 |
+| Fonction | GPIO ESP32-S3 |
 | ---------- | ----------- |
 | SCK | GPIO 18 |
 | MISO | GPIO 19 |
@@ -88,7 +88,7 @@ L'ESP32 dispose de deux bus SPI utilisables : **VSPI** (par défaut) et **HSPI**
 
 {% include message.html
 title="Broches SPI personnalisables"
-message="Le bus SPI de l'ESP32 peut être assigné à n'importe quelles broches via l'API. Les broches indiquées ici sont les valeurs par défaut du bus VSPI et les plus couramment utilisées. Pour un PCB, il est possible de choisir d'autres GPIOs selon le routage."
+message="Sur ESP32-S3, le bus SPI peut être assigné à n'importe quelles broches via `SPI.begin(SCK, MISO, MOSI, CS)`. Les broches indiquées ici sont celles utilisées dans ce tutoriel. Pour un PCB, il est possible de choisir d'autres GPIOs selon le routage."
 status="is-info"
 icon="fas fa-microchip" %}
 
@@ -215,7 +215,10 @@ void setup() {
 
   Serial.println("Initialisation de la carte SD...");
 
-  if (!SD.begin(CS_PIN)) {
+  // Sur ESP32-S3, initialiser le bus SPI avec les broches explicites
+  SPI.begin(18, 19, 23, CS_PIN);  // SCK, MISO, MOSI, CS
+
+  if (!SD.begin(CS_PIN, SPI)) {
     Serial.println("Erreur : carte SD non détectée ou non initialisée.");
     Serial.println("Vérifiez le câblage et le formatage FAT32.");
     while (true) delay(1000);
@@ -280,7 +283,8 @@ void setup() {
   Serial.begin(115200);
   delay(500);
 
-  if (!SD.begin(CS_PIN)) {
+  SPI.begin(18, 19, 23, CS_PIN);  // SCK, MISO, MOSI, CS
+  if (!SD.begin(CS_PIN, SPI)) {
     Serial.println("Erreur : carte SD non initialisée.");
     while (true) delay(1000);
   }
@@ -322,7 +326,8 @@ void setup() {
   Serial.begin(115200);
   delay(500);
 
-  if (!SD.begin(CS_PIN)) {
+  SPI.begin(18, 19, 23, CS_PIN);  // SCK, MISO, MOSI, CS
+  if (!SD.begin(CS_PIN, SPI)) {
     Serial.println("Erreur : carte SD non initialisée.");
     while (true) delay(1000);
   }
@@ -380,6 +385,7 @@ title = "Réduire la vitesse SPI"
 content="Certaines cartes SD ne supportent pas les vitesses SPI élevées. Initialisez avec une fréquence réduite :
 
 ```cpp
+SPI.begin(18, 19, 23, CS_PIN);
 SD.begin(CS_PIN, SPI, 4000000);  // 4 MHz au lieu de 25 MHz
 ```
 
@@ -421,7 +427,7 @@ Vous savez maintenant comment intégrer un socket SD sur un PCB avec l'ESP32 et 
 
 ### Points clés à retenir
 
-- **Bus SPI** : SCK=18, MISO=19, MOSI=23, CS=5 (broches par défaut VSPI)
+- **Bus SPI2** : SCK=18, MISO=19, MOSI=23, CS=5 — initialiser avec `SPI.begin(18, 19, 23, 5)`
 - **Format FAT32** obligatoire pour la bibliothèque `SD.h`
 - **Pull-up 10kΩ** sur MISO et CS indispensables sur PCB
 - **Découplage** : 100nF + 10µF au plus près de VDD du socket
