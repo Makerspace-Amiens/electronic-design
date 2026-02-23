@@ -83,7 +83,7 @@ L'ESP32-S3 dispose de deux bus SPI utilisables : **SPI2** (par défaut) et **SPI
 | ---------- | ----------- |
 | SCK | GPIO 18 |
 | MISO | GPIO 19 |
-| MOSI | GPIO 23 |
+| MOSI | GPIO 11 |
 | CS | GPIO 5 |
 
 {% include message.html
@@ -118,7 +118,7 @@ icon="fas fa-exclamation-triangle" %}
                ESP32
                GPIO18 ─────────── SCK  ─┐
                GPIO19 ─────────── MISO ─┤
-               GPIO23 ─────────── MOSI ─┤  Socket SD
+               GPIO11 ─────────── MOSI ─┤  Socket SD
                GPIO5  ─────────── CS   ─┤
                3.3V   ── 10kΩ ─── MISO ─┤  (pull-up)
                3.3V   ── 10kΩ ─── CS   ─┤  (pull-up)
@@ -216,7 +216,7 @@ void setup() {
   Serial.println("Initialisation de la carte SD...");
 
   // Sur ESP32-S3, initialiser le bus SPI avec les broches explicites
-  SPI.begin(18, 19, 23, CS_PIN);  // SCK, MISO, MOSI, CS
+  SPI.begin(18, 19, 11, CS_PIN);  // SCK, MISO, MOSI, CS
 
   if (!SD.begin(CS_PIN, SPI)) {
     Serial.println("Erreur : carte SD non détectée ou non initialisée.");
@@ -283,7 +283,7 @@ void setup() {
   Serial.begin(115200);
   delay(500);
 
-  SPI.begin(18, 19, 23, CS_PIN);  // SCK, MISO, MOSI, CS
+  SPI.begin(18, 19, 11, CS_PIN);  // SCK, MISO, MOSI, CS
   if (!SD.begin(CS_PIN, SPI)) {
     Serial.println("Erreur : carte SD non initialisée.");
     while (true) delay(1000);
@@ -326,7 +326,7 @@ void setup() {
   Serial.begin(115200);
   delay(500);
 
-  SPI.begin(18, 19, 23, CS_PIN);  // SCK, MISO, MOSI, CS
+  SPI.begin(18, 19, 11, CS_PIN);  // SCK, MISO, MOSI, CS
   if (!SD.begin(CS_PIN, SPI)) {
     Serial.println("Erreur : carte SD non initialisée.");
     while (true) delay(1000);
@@ -385,7 +385,7 @@ title = "Réduire la vitesse SPI"
 content="Certaines cartes SD ne supportent pas les vitesses SPI élevées. Initialisez avec une fréquence réduite :
 
 ```cpp
-SPI.begin(18, 19, 23, CS_PIN);
+SPI.begin(18, 19, 11, CS_PIN);
 SD.begin(CS_PIN, SPI, 4000000);  // 4 MHz au lieu de 25 MHz
 ```
 
@@ -427,7 +427,7 @@ Vous savez maintenant comment intégrer un socket SD sur un PCB avec l'ESP32 et 
 
 ### Points clés à retenir
 
-- **Bus SPI2** : SCK=18, MISO=19, MOSI=23, CS=5 — initialiser avec `SPI.begin(18, 19, 23, 5)`
+- **Bus SPI2** : SCK=18, MISO=19, MOSI=11, CS=5 — initialiser avec `SPI.begin(18, 19, 11, 5)`
 - **Format FAT32** obligatoire pour la bibliothèque `SD.h`
 - **Pull-up 10kΩ** sur MISO et CS indispensables sur PCB
 - **Découplage** : 100nF + 10µF au plus près de VDD du socket

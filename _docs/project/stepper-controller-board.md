@@ -117,9 +117,9 @@ La carte doit permettre de :
 | **Alimentation servomoteur et ESP32** | 5V | Fournie par le régulateur R-78E5.0-1.0 |
 | **Logique** | 3.3V | Fournie par le régulateur de la carte ESP32 |
 | **Courant moteurs** | 0.5A à 1.5A par phase | Réglable via Vref |
-| **Interface I2C** | SDA=GPIO21, SCL=GPIO22 | Écran OLED |
-| **Interface SPI** | SPI2 (GPIO 18/19/23/5) | Carte SD |
-| **GPIOs fins de course** | GPIO 34, 35, 36, 39 | Limit switches (input only) |
+| **Interface I2C** | SDA=GPIO8, SCL=GPIO9 | Écran OLED |
+| **Interface SPI** | SPI2 (GPIO 18/19/11/5) | Carte SD |
+| **GPIOs fins de course** | GPIO 1, 2, 3, 4 | Limit switches |
 | **Microcontrôleur** | ESP32 S3 UNO | Board : esp32-s3-devkitc-1 |
 | **Dimensions PCB** | Format shield arduino uno | Pour faciliter l'intégration avec l'ESP32 format Arduino UNO |
 | **Connecteurs** | Screw terminals | Bouton arrêt urgence |

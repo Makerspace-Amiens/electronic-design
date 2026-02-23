@@ -157,16 +157,16 @@ content="
 
 **Signaux de contrôle :**
 
-- STEP : GPIO 26
-- DIR : GPIO 27
+- STEP : GPIO 12
+- DIR : GPIO 13
 - EN : GPIO 14 (ou relié à GND pour toujours activer)
 - RESET et SLEEP : reliés ensemble (HIGH = actif)
 
 **Microstepping (exemple 1/16) (optionnel) :**
 
-- MS1 : 3.3V (GPIO 25 ou VDD)
-- MS2 : 3.3V (GPIO 33 ou VDD)
-- MS3 : 3.3V (GPIO 32 ou VDD)
+- MS1 : 3.3V (GPIO 1 ou VDD)
+- MS2 : 3.3V (GPIO 2 ou VDD)
+- MS3 : 3.3V (GPIO 3 ou VDD)
 
 **Sorties moteur :**
 
@@ -235,8 +235,8 @@ icon="fas fa-exclamation-triangle" %}
 #include <Arduino.h>
 
 // Pins GPIO de l'ESP32
-#define STEP_PIN    26
-#define DIR_PIN     27
+#define STEP_PIN    12
+#define DIR_PIN     13
 #define ENABLE_PIN  14
 
 // Paramètres moteur
@@ -309,8 +309,8 @@ Voici le code nécessaire à cette démonstration :
 #include <Arduino.h>
 #include <AccelStepper.h>
 
-#define STEP_PIN    26
-#define DIR_PIN     27
+#define STEP_PIN    12
+#define DIR_PIN     13
 #define ENABLE_PIN  14
 
 // AccelStepper::DRIVER = mode STEP/DIR (compatible A4988, DRV8825...)

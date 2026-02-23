@@ -81,12 +81,12 @@ L'I2C permet de connecter plusieurs périphériques sur le même bus grâce à u
 
 | Fonction | GPIO ESP32-S3 |
 | ---------- | ----------- |
-| SDA | GPIO 21 |
-| SCL | GPIO 22 |
+| SDA | GPIO 8 |
+| SCL | GPIO 9 |
 
 {% include message.html
 title="Broches I2C personnalisables"
-message="Sur ESP32-S3, le bus I2C peut être assigné à n'importe quelles broches via `Wire.begin(SDA, SCL)`. Les broches GPIO 21 et 22 sont celles utilisées dans ce tutoriel et correspondent au câblage de la carte ESP32 S3 UNO."
+message="Sur ESP32-S3, le bus I2C peut être assigné à n'importe quelles broches via `Wire.begin(SDA, SCL)`. Les broches GPIO 8 et 9 sont celles utilisées dans ce tutoriel et correspondent au câblage de la carte ESP32 S3 UNO."
 status="is-info"
 icon="fas fa-microchip" %}
 
@@ -122,8 +122,8 @@ icon="fas fa-info-circle" %}
 
 ```text
                ESP32
-               GPIO21 ─────────── SDA  ─┐
-               GPIO22 ─────────── SCL  ─┤  Écran SSD1306
+               GPIO8  ─────────── SDA  ─┐
+               GPIO9  ─────────── SCL  ─┤  Écran SSD1306
                3.3V   ─────────── VCC  ─┤  (module I2C)
                GND    ─────────── GND  ─┘
 ```
@@ -213,7 +213,7 @@ void setup() {
   delay(500);
 
   // Initialiser l'I2C
-  Wire.begin(21, 22);  // SDA=21, SCL=22 (par défaut)
+  Wire.begin(8, 9);  // SDA=8, SCL=9
 
   // Initialiser l'écran
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
@@ -267,7 +267,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin(21, 22);
+  Wire.begin(8, 9);
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
     Serial.println("Erreur SSD1306");
@@ -319,7 +319,7 @@ const int ballRadius = 3;
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin(21, 22);
+  Wire.begin(8, 9);
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
     Serial.println("Erreur SSD1306");
@@ -394,7 +394,7 @@ content="Utilisez le code suivant pour scanner le bus I2C et détecter l'adresse
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin(21, 22);
+  Wire.begin(8, 9);
   Serial.println(\"Scan I2C...\");
 
   for (byte address = 1; address < 127; address++) {
@@ -496,7 +496,7 @@ Vous savez maintenant comment intégrer un écran OLED SSD1306 sur un PCB avec l
 
 ### Points clés à retenir
 
-- **Bus I2C** : SDA=21, SCL=22 (broches par défaut ESP32)
+- **Bus I2C** : SDA=8, SCL=9 (broches utilisées sur la carte ESP32 S3 UNO)
 - **Pull-up 4.7kΩ** sur SDA et SCL (souvent intégrées au module)
 - **Découplage** : 100nF + 10µF au plus près de VCC
 - **Buffer RAM** : 1024 octets pour 128×64 pixels
