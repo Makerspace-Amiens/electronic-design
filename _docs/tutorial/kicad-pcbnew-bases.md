@@ -162,6 +162,7 @@ content="Pour chaque composant de votre schéma :
 4. L'empreinte apparaît à côté du composant
 
 **Empreintes courantes :**
+
 - Résistances/condensateurs CMS : R_0805, C_0603
 - Résistances traversantes : R_Axial_DIN0207
 - LED CMS : LED_0805
@@ -330,6 +331,7 @@ title = "Étape 2 : Définir les contraintes"
 content="Dans l'onglet **Contraintes**, configurez les valeurs minimales :
 
 **Pour un PCB standard 2 couches :**
+
 - Clearance minimum : `0.2mm`
 - Largeur de piste minimum : `0.2mm`
 - Largeur de piste maximum : `2mm` (ou plus selon besoins)
@@ -526,7 +528,7 @@ title = "Importer une configuration DRC depuis un autre projet"
 content="Vous pouvez importer des règles de conception pré-configurées depuis un autre projet ou un fabricant de PCB :
 
 1. Ouvrez la fenêtre DRC : **Fichier > Configuration de carte**
-2. Cliquez sur **Règles de conception > Contraintes** 
+2. Cliquez sur **Règles de conception > Contraintes**
 3. Dans l'onglet **Contraintes de conception**, cliquez sur **Importer les paramètres depuis un autre projet**
 4. Sélectionnez le fichier `.kicad_pro` ou `.kicad_dru` du projet source
 5. Les règles sont importées : validez avec **OK**
@@ -699,14 +701,3 @@ title="Continuez à pratiquer !"
 message="La conception de PCB est un art qui s'améliore avec la pratique. Commencez simple, apprenez de chaque projet, et n'ayez pas peur de faire des erreurs (c'est comme ça qu'on apprend !). Bon routage !"
 status="is-success"
 icon="fas fa-graduation-cap" %}
-
----
-
-## Pour aller plus loin
-
-{%
-  include card_collections.html
-  title="Tutoriels KiCAD"
-  description="Explorez d'autres tutoriels pour maîtriser KiCAD"
-  type="tutorial"
-%}
