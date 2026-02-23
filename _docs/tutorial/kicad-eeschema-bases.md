@@ -156,7 +156,7 @@ image="placer-composant.png" %}
 
 {% include message.html
 title="Bibliothèques de composants"
-message="Les composants sont organisés en bibliothèques thématiques : Device (composants génériques), Connector (connecteurs), MCU (microcontrôleurs), etc. N'hésitez pas à explorer les différentes bibliothèques."
+message="Les composants sont organisés en bibliothèques thématiques : Device (composants génériques), Connector (connecteurs), MCU (microcontrôleurs), etc. N'hésitez pas à explorer les différentes bibliothèques. Pour importer des bibliothèques supplémentaires (comme la librairie Makerspace Amiens), consultez notre tutoriel [KiCAD - Importer des librairies](/electronic-design/docs/tutorial/kicad-import-librairies)."
 status="is-info"
 icon="fas fa-book" %}
 

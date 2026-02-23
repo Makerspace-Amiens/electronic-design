@@ -211,7 +211,9 @@ content="KiCAD est livré avec de nombreux composants, mais vous pouvez en ajout
 
 - Depuis le gestionnaire de bibliothèques (Préférences > Gérer les bibliothèques de symboles/empreintes)
 - En téléchargeant des bibliothèques tierces depuis GitHub
-- En créant vos propres bibliothèques personnalisées" %}
+- En créant vos propres bibliothèques personnalisées
+
+Pour apprendre à importer des bibliothèques supplémentaires dans KiCAD, consultez notre tutoriel [KiCAD - Importer des librairies](/electronic-design/docs/tutorial/kicad-import-librairies)." %}
 
 ---
 

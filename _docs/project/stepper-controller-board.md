@@ -210,6 +210,12 @@ content="Objectif : Définir l'architecture globale avant de dessiner le schéma
 - Définir les alimentations (3.3V, 5V, 12V/24V, GND communs)
 - Identifier les découplages critiques (VDD, VMOT) " %}
 
+{% include message.html
+title="Librairie Makerspace Amiens — fortement recommandée"
+message="Avant de commencer le schéma, importez la librairie KiCad du Makerspace Amiens. Elle référence les composants disponibles en stock (ESP32, A4988, SSD1306, connecteurs, passifs…) et vous évitera de chercher ou créer des symboles manuellement. Consultez le tutoriel [KiCAD - Importer des librairies](/electronic-design/docs/tutorial/kicad-import-librairies) avant de démarrer l'étape 2.2."
+status="is-warning"
+icon="fas fa-exclamation-triangle" %}
+
 {% include step-tuto.html
 greyBackground = true
 title = "Étape 2.2 : Schéma électronique dans KiCad"
@@ -374,6 +380,7 @@ Ce projet s'appuie sur les tutoriels suivants (à consulter impérativement) :
 - [Driver A4988 avec ESP32](/electronic-design/docs/tutorial/a4988-stepper-driver)
 - [Carte SD avec ESP32](/electronic-design/docs/tutorial/esp32-carte-sd)
 - [Écran OLED SSD1306 avec ESP32](/electronic-design/docs/tutorial/esp32-ssd1306-oled)
+- [KiCad : Importer des librairies](/electronic-design/docs/tutorial/kicad-import-librairies)
 - [KiCad : Schématique](/electronic-design/docs/tutorial/kicad-eeschema-bases)
 - [KiCad : Routage PCB](/electronic-design/docs/tutorial/kicad-pcbnew-bases)
 - [KiCad : Fabrication PCB](/electronic-design/docs/tutorial/kicad-fabrication-pcb)
