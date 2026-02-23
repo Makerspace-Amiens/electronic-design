@@ -81,11 +81,11 @@ greyBackground = true
 title = "Les zones de l'interface"
 content="L'interface d'Eeschema est divisée en plusieurs zones :
 
-**1. Barre d'outils supérieure** : Outils principaux (sauvegarder, annuler, zoom, etc.)
-**2. Barre d'outils verticale droite** : Outils de dessin et placement
-**3. Zone de dessin centrale** : Votre schéma
-**4. Arborescence à gauche** : Navigation entre les feuilles
-**5. Barre de messages en bas** : Informations et coordonnées"
+- **1. Barre d'outils supérieure** : Outils principaux (sauvegarder, annuler, zoom, etc.)
+- **2. Barre d'outils verticale droite** : Outils de dessin et placement
+- **3. Zone de dessin centrale** : Votre schéma
+- **4. Arborescence à gauche** : Navigation entre les feuilles
+- **5. Barre de messages en bas** : Informations et coordonnées"
 image="interface-eeschema.png" %}
 
 {% include step-tuto.html
@@ -93,14 +93,14 @@ greyBackground = true
 title = "Raccourcis clavier essentiels"
 content="Mémorisez ces raccourcis pour gagner en efficacité :
 
-**A** : Ajouter un composant (Add symbol)
-**W** : Tracer un fil (Wire)
-**L** : Ajouter un label
-**M** : Déplacer un élément
-**R** : Pivoter un élément
-**E** : Éditer les propriétés
-**Delete** : Supprimer un élément
-**Échap** : Annuler l'action en cours" %}
+- **A** : Ajouter un composant (Add symbol)
+- **W** : Tracer un fil (Wire)
+- **L** : Ajouter un label
+- **M** : Déplacer un élément
+- **R** : Pivoter un élément
+- **E** : Éditer les propriétés
+- **Delete** : Supprimer un élément
+- **Échap** : Annuler l'action en cours" %}
 
 {% include message.html
 title="Astuce - Zoom"
