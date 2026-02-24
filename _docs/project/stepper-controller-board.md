@@ -181,7 +181,7 @@ content="Objectif : Valider le fonctionnement d'un driver A4988 avec un moteur N
 - Tester le code de rotation simple (full step)
 - Mesurer la consommation et la température du driver
 
-**Livrables :** Photo du montage dans votre projet machine that draw" %}
+**Livrables :** Photo du montage dans votre projet machine that draws" %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -194,7 +194,7 @@ content="Objectif : Afficher du texte et des graphiques sur l'OLED.
 - Afficher : nom du fichier, état, progression
 - Créer un menu simple avec 2-3 options (Start, Stop)
 
-**Livrables :** Documentation du prototypage (photos + code + résultats des tests) dans votre projet machine that draw" %}
+**Livrables :** Documentation du prototypage (photos + code + résultats des tests) dans votre projet machine that draws" %}
 
 ### Conception du schéma électronique (KiCad)
 
@@ -232,7 +232,7 @@ content="Objectif : Dessiner le schéma complet dans KiCad Eeschema.
 - Ajouter les connecteurs pour les 2 limit switches
 - Annoter tous les composants (désignateurs R1, C1, etc.)
 
-**Livrables :** Fichier KiCad schématique (.kicad_sch) + PDF du schéma dans votre projet machine that draw" %}
+**Livrables :** Fichier KiCad schématique (.kicad_sch) + PDF du schéma dans votre projet machine that draws" %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -274,7 +274,7 @@ content="Objectif : Router le PCB en respectant les contraintes.
 - Ajouter un plan de masse (GND) sur la couche inférieure
 - Lancer le DRC (Design Rules Check) et corriger les erreurs
 
-**Livrables :** Fichier KiCad PCB (.kicad_pcb) dans votre projet machine that draw" %}
+**Livrables :** Fichier KiCad PCB (.kicad_pcb) dans votre projet machine that draws" %}
 
 {% include step-tuto.html
 greyBackground = true
@@ -287,7 +287,7 @@ content="Objectif : Générer les fichiers de fabrication et commander les PCB.
 - Vérifier les fichiers avec un visualiseur Gerber (GerbView ou en ligne)
 - Uploader l'ensemble des fichiers Kicad dans votre projet Machine that draws
 
-**Livrables :** Archive des fichiers Gerber (.zip) dans votre projet machine that draw" %}
+**Livrables :** Archive des fichiers Gerber (.zip) dans votre projet machine that draws" %}
 
 ### Assemblage, tests et validation
 
